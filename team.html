@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ArcLab Clone</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+ 
+
+  <style>
+    html {
+    scroll-behavior: smooth;
+}
+
+
+.hero-section {
+    height: 80vh;
+    background-image: url('../images/bg_2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-section .overlay {
+    background-color: rgba(255, 255, 255, 0.3);
+    height: 100%;
+    width: 100%;
+    padding-top: 1rem;
+}
+
+/* Navbar */
+.navbar {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    z-index: 10;
+    padding: 0 30px;
+}
+
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  background-color: transparent; 
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+
+
+.navbar.scrolled {
+  background-color: white; 
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); 
+}
+
+
+
+
+.hero-section .navbar {
+    margin-top: -10px;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-top: -5px;
+}
+
+/* Navbar Links */
+.navbar-nav .nav-link {
+    margin-left: 20px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #6fbf73 !important;
+  }
+
+   
+/* General Hero Section */
+.hero-wrap {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.hero-wrap:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Optional overlay */
+}
+
+/* Second Variation */
+.hero-wrap-2 {
+  height: 400px; 
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+.breadcrumbs, .breadcrumbs a, .bread {
+  color: black !important;
+}
+
+
+
+.team-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 40px;
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px; 
+}
+
+.team-member {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+}
+
+.image-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.name-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.0); 
+  color: #fff;
+  padding: 10px 14px;
+  font-size: 14px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.name-overlay span {
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.image-wrapper:hover .name-overlay {
+  background-color: rgba(0, 0, 0, 0.0); 
+}
+
+.image-wrapper:hover .name-overlay span {
+  color: #000; 
+}
+
+.title {
+  font-size: 14px; 
+  color: #8bc34a; 
+  font-weight: bold; 
+  margin-top: 10px; 
+  padding-left: 0; 
+  text-transform: uppercase;
+  text-align: left; 
+  width: 100%; 
+  padding-left: 10px; 
+  transform: uppercase;
+}
+
+
+
+
+
+/* Footer */
+.footer-section {
+  background: #11111a;
+  color: #888;
+  padding: 60px 40px 30px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.footer-col {
+  flex: 1 1 160px;
+  min-width: 160px;
+}
+
+.footer-col h2 {
+  color: #fff;
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.footer-col h3 {
+  color: #fff;
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+.footer-col p {
+  max-width: 200px;
+  line-height: 1.6;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 10px;
+  color: #888;
+  cursor: pointer;
+}
+
+.footer-col ul li i {
+  margin-right: 10px;
+}
+
+.footer-social {
+  margin-top: 20px;
+}
+
+.footer-social i {
+  font-size: 16px;
+  color: #fff;
+  margin-right: 10px;
+  background: #1e1e2a;
+  padding: 8px;
+  border-radius: 50%;
+}
+
+.footer-copy {
+  text-align: center;
+  color: #888;
+  font-size: 13px;
+  margin-top: 40px;
+}
+
+.footer-copy i {
+  color: #fff;
+}
+
+.footer-copy span {
+  color: #9acd32;
+  font-weight: 500;
+}
+
+
+
+  
+
+
+
+   
+  </style>
+</head>
+
+<body>
+
+
+   
+      <div id="top"></div>
+      <!-- Navbar Section: Now placed outside the Hero Section -->
+      <nav class="navbar navbar-expand-lg navbar-light py-3">
+        <div class="container">
+          <a class="navbar-brand text-black fw-bold" href="#">ArcLab.</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                  aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item"><a class="nav-link text-black active" href="index.html">Home</a></li>
+              <li class="nav-item"><a class="nav-link text-black" href="about.html">About</a></li>
+              <li class="nav-item"><a class="nav-link text-black" href="team.html">Team</a></li>
+              <li class="nav-item"><a class="nav-link text-black" href="services.html">Services</a></li>
+              <li class="nav-item"><a class="nav-link text-black" href="project.html">Project</a></li>
+              <li class="nav-item"><a class="nav-link text-black" href="blog.html">Blog</a></li>
+              <li class="nav-item"><a class="nav-link text-black" href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+
+   <section class="hero-section">
+    <div class="overlay"> 
+      <div class="container">
+        <div class="row no-gutters slider-text js-fullheight align-items-end" style="height: 520px;">
+          <div class="col-md-9 ftco-animate pb-5 fadeInUp ftco-animated">
+           <p class="breadcrumbs"><span class="mr-2"><a href="index.html"> Home <i class="fa fa-chevron-right"></i></a></span> <span> Architect <i class="fa fa-chevron-right"></i></span></p>
+           <h1 class="mb-3 bread">Architect</h1>
+         </div>
+       </div>
+       </div>
+
+
+       <div class="team-container">
+        <div class="team-member">
+          <div class="image-wrapper">
+            <img src="images/te3.jpg" alt="John Wilson">
+            <div class="name-overlay"><span>
+              John</span> <span>Wilson</span></div>
+          </div>
+          <div class="title">ARCHITECT</div>
+        </div>
+        
+        <div class="team-member">
+          <div class="image-wrapper">
+            <img src="images/te (1).jpg" alt="Jane Doe">
+            <div class="name-overlay"><span>Robert</span> <span>Wills</span></div>
+          </div>
+          <div class="title">DEVELOPER</div>
+        </div>
+      
+        <div class="team-member">
+          <div class="image-wrapper">
+            <img src="images/te (2).jpg" alt="Mark Smith">
+            <div class="name-overlay"><span>Mike</span> <span>SMITH</span></div>
+          </div>
+          <div class="title">DESIGNER</div>
+        </div>
+      
+        <div class="team-member">
+          <div class="image-wrapper">
+            <img src="images/te (3).jpg" alt="Lucy Brown">
+            <div class="name-overlay"><span>Adrian</span> <span>Henderson</span></div>
+          </div>
+          <div class="title">PRODUCT MANAGER</div>
+        </div>
+      
+        <div class="team-member">
+          <div class="image-wrapper">
+            <img src="images/te3.jpg" alt="David Johnson">
+            <div class="name-overlay"><span>DAVID</span> <span>JOHNSON</span></div>
+          </div>
+          <div class="title">QA ENGINEER</div>
+        </div>
+      
+        <div class="team-member">
+          <div class="image-wrapper">
+            <img src="images/te (1).jpg" alt="Emma Davis">
+            <div class="name-overlay"><span>EMMA</span> <span>DAVIS</span></div>
+          </div>
+          <div class="title">MARKETING SPECIALIST</div>
+        </div>
+      
+        <div class="team-member">
+          <div class="image-wrapper">
+            <img src="images/te (2).jpg" alt="Chris Lee">
+            <div class="name-overlay"><span>CHRIS</span> <span>LEE</span></div>
+          </div>
+          <div class="title">SYSTEM ADMINISTRATOR</div>
+        </div>
+      
+        <div class="team-member">
+          <div class="image-wrapper">
+            <img src="images/te (3).jpg" alt="Sophie Williams">
+            <div class="name-overlay"><span>SOPHIE</span> <span>WILLIAMS</span></div>
+          </div>
+          <div class="title">UX/UI DESIGNER</div>
+        </div>
+      </div>
+      
+      
+      
+
+
+       <section class="footer-section">
+        <div class="footer-container">
+          <div class="footer-col">
+            <h2>ArchLab.</h2>
+            <p>Far far away, behind the word mountains, far from the countries.</p>
+            <div class="footer-social">
+              <i class="fa-brands fa-twitter"></i>
+              <i class="fa-brands fa-facebook-f"></i>
+              <i class="fa-brands fa-instagram"></i>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h3>Community</h3>
+            <ul>
+              <li>> Projects</li>
+              <li>> Team</li>
+              <li>> Reviews</li>
+              <li>> FAQs</li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h3>About Us</h3>
+            <ul>
+              <li>> Our Story</li>
+              <li>> Meet the team</li>
+              <li>> Careers</li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h3>Company</h3>
+            <ul>
+              <li>> About Us</li>
+              <li>> Press</li>
+              <li>> Contact</li>
+              <li>> Careers</li>
+            </ul>
+          </div>
+          <div class="footer-col contact">
+            <h3>Have a Questions?</h3>
+            <ul>
+              <li><i class="fa-solid fa-map-marker-alt"></i> 203 Fake St. Mountain View, San Francisco, California, USA</li>
+              <li><i class="fa-solid fa-phone"></i> +2 392 3929 210</li>
+              <li><i class="fa-solid fa-envelope"></i> info@yourdomain.com</li>
+            </ul>
+          </div>
+        </div>
+        <p class="footer-copy">Copyright ©2025 All rights reserved | This template is made with <i class="fa fa-heart"></i> by <span>Colorlib</span></p>
+      </section>
+
+
+ 
+
+
+<script src="js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,982 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ArcLab Clone</title>
+
+ 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    html {
+    scroll-behavior: smooth;
+}
+
+/* Hero Section Background */
+.hero-section {
+    height: 80vh;
+    background-image: url('../images/bg_2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Optional Overlay (Bright semi-transparent layer) */
+.hero-section .overlay {
+    background-color: rgba(255, 255, 255, 0.3);
+    height: 100%;
+    width: 100%;
+    padding-top: 1rem;
+}
+
+/* Navbar */
+.navbar {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    z-index: 10;
+    padding: 0 30px;
+}
+
+/* Sticky Navbar */
+/* Navbar: Transparent by default */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  background-color: transparent; /* Transparent background */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+
+/* Add shadow and white background when scrolling */
+.navbar.scrolled {
+  background-color: white; /* White background when scrolling */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Optional shadow */
+}
+
+
+
+
+.hero-section .navbar {
+    margin-top: -10px;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-top: -5px;
+}
+
+/* Navbar Links */
+.navbar-nav .nav-link {
+    margin-left: 20px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #6fbf73 !important;
+  }
+
+   
+/* General Hero Section */
+.hero-wrap {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.hero-wrap:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Optional overlay */
+}
+
+/* Second Variation */
+.hero-wrap-2 {
+  height: 400px; /* Often shorter for inner pages */
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+.breadcrumbs, .breadcrumbs a, .bread {
+  color: black !important;
+}
+
+/* ArcLab */
+.about-section {
+  padding: 6em 0;
+}
+
+.img,
+.img-2 {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 100%;
+  border-radius: 8px;
+}
+
+.img-overlay {
+  position: relative;
+  background-blend-mode: overlay;
+}
+
+.request-quote {
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+  padding: 30px;
+  color: #fff;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.request-quote .subheading {
+  font-size: 14px;
+  color: #ccc;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.request-quote h3 {
+  font-size: 24px;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.request-form .form-control {
+  background: #fff;
+  border: 1px solid #ccc;
+  height: 45px;
+  font-size: 16px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+}
+
+.request-form textarea.form-control {
+  height: 200px;
+}
+
+.request-form .btn {
+  background-color: #96bb7c;
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.request-form .btn:hover {
+  background-color: #85a96b;
+}
+
+.wrap-about {
+  padding: 20px;
+}
+
+.heading-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.heading-section h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #000;
+}
+
+.heading-section p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #555;
+}
+
+
+/* Counter */
+.my-counter-section {
+  background-image: url('your-background.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  padding: 5em 0;
+}
+
+.my-counter-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.my-counter-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.my-counter-item {
+  flex: 1 1 22%;
+  min-width: 200px;
+}
+
+.my-counter-box {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.my-counter-box:hover {
+  transform: translateY(-5px);
+}
+
+.my-counter-number {
+  font-size: 40px;
+  font-weight: 700;
+  color: #96bb7c;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.my-counter-content span {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+  display: inline-block;
+  text-align: center;
+}
+
+
+/* Portfolio Section */
+.ftco-section {
+  padding: 7em 0;
+  background: #f8f9fa;
+}
+
+.heading-section {
+  margin-bottom: 3rem;
+}
+
+.heading-section .subheading {
+  font-size: 14px;
+  display: block;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #ff5e14;
+  font-weight: 700;
+}
+
+.heading-section h2 {
+  font-size: 34px;
+  font-weight: 700;
+  color: #000;
+}
+
+/* Testimonial Item */
+.testimony-wrap {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.testimony-wrap:hover {
+  transform: translateY(-10px);
+}
+
+/* Quote Icon */
+.testimony-wrap .fa-quote-left {
+  font-size: 40px;
+  color: #4fc75f;
+  position: absolute;
+  top: -15px;
+  left: 15px;
+}
+
+/* Testimonials */
+.testimonials {
+  background: #f8f9fa;
+  text-align: center;
+  padding: 80px 20px;
+  font-family: sans-serif;
+}
+
+.heading .subheading {
+  color: #8bc79a;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+  display: inline-block;
+  position: relative;
+}
+
+.heading h2 {
+  font-size: 36px;
+  margin-bottom: 40px;
+  font-weight: bold;
+  color: #333;
+}
+
+.carousel-container {
+  overflow: hidden;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.testimonial-card {
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  margin: 0 10px;
+  padding: 30px;
+  flex: 0 0 33.3333%;
+  box-sizing: border-box;
+  text-align: left;
+  position: relative;
+}
+
+.quote-icon {
+  font-size: 40px;
+  color: #8bc79a;
+  position: absolute;
+  top: 20px;
+  left: 30px;
+}
+
+.testimonial-card p {
+  margin-top: 40px;
+  color: #555;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.client-info {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.client-info img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-right: 15px;
+  object-fit: cover;
+}
+
+.client-info strong {
+  display: block;
+  font-size: 16px;
+  color: #333;
+}
+
+.client-info span {
+  font-size: 14px;
+  color: #aaa;
+}
+
+.carousel-dots {
+  margin-top: 30px;
+}
+
+.dot {
+  height: 10px;
+  width: 10px;
+  margin: 0 6px;
+  background-color: #ddd;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.dot.active {
+  background-color: #8bc79a;
+}
+
+
+
+
+/* Pricing Section Styles */
+.ftco-section.pricing-section {
+  padding: 70px 0;
+}
+
+.pricing-section .heading-section {
+  text-align: center;
+}
+
+.pricing-section h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-top: 20px;
+}
+
+.pricing-section .subheading {
+  font-size: 18px;
+  color: #7f8c8d;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.pricing-section .row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.pricing-section .col-md-4 {
+  width: 100%;
+  max-width: 33.33%;
+  padding: 0;
+}
+
+.pricing-section .block-7 {
+  border: 1px solid #e1e1e1;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  /* Ensure the blocks are the same height */
+}
+
+.pricing-section .block-7:hover {
+  transform: translateY(-10px);
+}
+
+/* Fixed height for images */
+.pricing-section .block-7 img {
+  height: 200px; /* Fixed height */
+  width: 100%; /* Ensure images fill the width */
+  object-fit: cover; /* Crop images to fill the container */
+}
+
+/* Add a wrapper around the content to ensure equal height */
+.pricing-section {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #fff;
+  font-family: sans-serif;
+}
+
+.section-subtitle {
+  color: #9abf9a;
+  font-size: 12px;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.section-title {
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.pricing-cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.pricing-card {
+  width: 260px;
+  background-color: #fff;
+  border-radius: 6px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.08);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pricing-card img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+}
+
+.features {
+  list-style: none;
+  padding: 20px;
+  text-align: left;
+  color: #444;
+  font-size: 14px;
+  margin: 0;
+}
+
+.features li {
+  margin: 10px 0;
+  position: relative;
+  padding-left: 20px;
+}
+
+.features li::before {
+  content: '✔';
+  position: absolute;
+  left: 0;
+  color: #8ac38b;
+}
+
+.price {
+  font-size: 28px;
+  font-weight: bold;
+  color: #222;
+  margin: 10px 0;
+}
+
+.price span {
+  font-size: 12px;
+  font-weight: normal;
+  color: #555;
+  margin-left: 5px;
+}
+
+.start-btn {
+  background-color: #8ac38b;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 13px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+/* Footer */
+.footer-section {
+  background: #11111a;
+  color: #888;
+  padding: 60px 40px 30px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.footer-col {
+  flex: 1 1 160px;
+  min-width: 160px;
+}
+
+.footer-col h2 {
+  color: #fff;
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.footer-col h3 {
+  color: #fff;
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+.footer-col p {
+  max-width: 200px;
+  line-height: 1.6;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 10px;
+  color: #888;
+  cursor: pointer;
+}
+
+.footer-col ul li i {
+  margin-right: 10px;
+}
+
+.footer-social {
+  margin-top: 20px;
+}
+
+.footer-social i {
+  font-size: 16px;
+  color: #fff;
+  margin-right: 10px;
+  background: #1e1e2a;
+  padding: 8px;
+  border-radius: 50%;
+}
+
+.footer-copy {
+  text-align: center;
+  color: #888;
+  font-size: 13px;
+  margin-top: 40px;
+}
+
+.footer-copy i {
+  color: #fff;
+}
+
+.footer-copy span {
+  color: #9acd32;
+  font-weight: 500;
+}
+
+
+
+  
+
+
+
+   
+  </style>
+</head>
+
+<body>
+
+
+   
+      <div id="top"></div>
+      <!-- Navbar Section: Now placed outside the Hero Section -->
+      <nav class="navbar navbar-expand-lg navbar-light py-3">
+        <div class="container">
+          <a class="navbar-brand text-black fw-bold" href="#">ArcLab.</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                  aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item"><a class="nav-link text-black active" href="index.html">Home</a></li>
+              <li class="nav-item"><a class="nav-link text-black" href="about.html">About</a></li>
+              <li class="nav-item"><a class="nav-link text-black" href="team.html">Team</a></li>
+              <li class="nav-item"><a class="nav-link text-black" href="services.html">Services</a></li>
+              <li class="nav-item"><a class="nav-link text-black" href="project.html">Project</a></li>
+              <li class="nav-item"><a class="nav-link text-black" href="blog.html">Blog</a></li>
+              <li class="nav-item"><a class="nav-link text-black" href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Hero Section with Navbar included inside it -->
+   <section class="hero-section">
+    <div class="overlay"> <!-- Optional dark overlay -->
+      <div class="container">
+        <div class="row no-gutters slider-text js-fullheight align-items-end" style="height: 520px;">
+          <div class="col-md-9 ftco-animate pb-5 fadeInUp ftco-animated">
+           <p class="breadcrumbs"><span class="mr-2"><a href="index.html"> Home <i class="fa fa-chevron-right"></i></a></span> <span> About Us <i class="fa fa-chevron-right"></i></span></p>
+           <h1 class="mb-3 bread">About Us</h1>
+         </div>
+       </div>
+       </div>
+  
+   
+    
+    
+    <!-- About-->
+<section class="about-section">
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-7 order-md-last d-md-flex align-items-stretch">
+              <div class="img w-100 img-2 mr-md-2" style="background-image: url(images/bg_2.jpg);"></div>
+              <div class="img w-100 img-2 img-overlay ml-md-2 p-4" style="background-image: url(images/bg_1.jpg);">
+                  <div class="request-quote py-5">
+                      <div class="py-2">
+                          <span class="subheading">Be Part of our Business</span>
+                          <h3>Request A Quote</h3>
+                      </div>
+                      <form action="#" class="request-form">
+                          <div class="form-group">
+                              <input type="text" class="form-control" placeholder="First Name">
+                          </div>
+                          <div class="form-group">
+                              <input type="text" class="form-control" placeholder="Last Name">
+                          </div>
+                          <div class="form-group">
+                              <div class="form-field">
+                                  <div class="select-wrap">
+                                      <div class="icon-arr"><span class="ion-ios-arrow-down"></span></div>
+                                      <select name="" id="" class="form-control">
+                                          <option value="">Select Your Services</option>
+                                          <option value="">Construction</option>
+                                          <option value="">Renovation</option>
+                                          <option value="">Interior Design</option>
+                                          <option value="">Exterior Design</option>
+                                          <option value="">Painting</option>
+                                      </select>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="form-group">
+                              <input type="text" class="form-control" placeholder="Phone">
+                          </div>
+                          <div class="form-group">
+                              <textarea name="" id="" cols="30" rows="2" class="form-control" placeholder="Message"></textarea>
+                          </div>
+                          <div class="form-group">
+                              <input type="submit" value="Request A Quote" class="btn btn-primary py-3 px-4">
+                          </div>
+                      </form>
+                  </div>
+              </div>
+          </div>
+          <div class="col-lg-5 wrap-about py-md-5">
+              <div class="heading-section pr-md-5">
+                  <h2 class="mb-4">ArcLab</h2>
+                  <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+                  <p>On her way she met a copy. The copy warned the Little Blind Text, that where it came from it would have been rewritten a thousand times and everything that was left from its origin would be the word "and" and the Little Blind Text should turn around and return to its own, safe country. But nothing the copy said could convince her and so it didn’t take long until a few insidious Copy Writers ambushed her, made her drunk with Longe and Parole and dragged her into their agency, where they abused her for their.</p>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+
+
+    <!-- Counter-->
+<section class="my-counter-section" id="counter">
+  <div class="my-counter-container">
+    <div class="my-counter-row">
+      <div class="my-counter-item">
+        <div class="my-counter-box">
+          <div class="my-counter-content">
+            <strong class="my-counter-number" data-number="1000">1,000</strong>
+            <span>Years of <br>Experience</span>
+          </div>
+        </div>
+      </div>
+      <div class="my-counter-item">
+        <div class="my-counter-box">
+          <div class="my-counter-content">
+            <strong class="my-counter-number" data-number="2500">2,500</strong>
+            <span>Project <br>Done</span>
+          </div>
+        </div>
+      </div>
+      <div class="my-counter-item">
+        <div class="my-counter-box">
+          <div class="my-counter-content">
+            <strong class="my-counter-number" data-number="500">500</strong>
+            <span>Licensed <br>Architect</span>
+          </div>
+        </div>
+      </div>
+      <div class="my-counter-item">
+        <div class="my-counter-box">
+          <div class="my-counter-content">
+            <strong class="my-counter-number" data-number="67">67</strong>
+            <span>Happy <br>Customers</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="testimonials">
+  <div class="heading">
+    <span class="subheading">Testimonial</span>
+    <h2>Happy Clients</h2>
+  </div>
+  <div class="carousel-container">
+    <div class="carousel-track">
+      
+      <div class="testimonial-card">
+        <i class="quote-icon">“</i>
+        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+        <div class="client-info">
+          <img src="images/person_1.jpg" alt="Client">
+          <div>
+            <strong>Roger Scott</strong>
+            <span>Marketing Manager</span>
+          </div>
+        </div>
+      </div>
+
+   
+      <div class="testimonial-card">
+        <i class="quote-icon">“</i>
+        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+        <div class="client-info">
+          <img src="images/person_2.jpg" alt="Client">
+          <div>
+            <strong>Roger Scott</strong>
+            <span>Marketing Manager</span>
+          </div>
+        </div>
+      </div>
+
+ 
+      <div class="testimonial-card">
+        <i class="quote-icon">“</i>
+        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+        <div class="client-info">
+          <img src="images/person_3.jpg" alt="Client">
+          <div>
+            <strong>Roger Scott</strong>
+            <span>Marketing Manager</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Add more testimonials here if needed -->
+    </div>
+  </div>
+
+  <div class="carousel-dots">
+    <span class="dot active"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+  </div>
+</section>
+    
+    
+    <!-- Pricing Section-->
+<section class="pricing-section">
+  <h6 class="section-subtitle">PRICING</h6>
+  <h2 class="section-title">Price & Plans</h2>
+
+  <div class="pricing-cards">
+
+    <div class="pricing-card">
+      <img src="images/work-3.jpg" alt="Plan 1">
+      <ul class="features">
+        <li>Planning Solution</li>
+        <li>10 Construction Drawings</li>
+        <li>Selection Materials</li>
+        <li>Unlimited Revision</li>
+      </ul>
+      <div class="price">$78<span>/mos</span></div>
+      <button class="start-btn">GET STARTED</button>
+    </div>
+
+ 
+    <div class="pricing-card">
+      <img src="images/work-3.jpg" alt="Plan 2">
+      <ul class="features">
+        <li>Planning Solution</li>
+        <li>10 Construction Drawings</li>
+        <li>Selection Materials</li>
+        <li>Unlimited Revision</li>
+      </ul>
+      <div class="price">$88<span>/mos</span></div>
+      <button class="start-btn">GET STARTED</button>
+    </div>
+
+
+    <div class="pricing-card">
+      <img src="images/work-3.jpg" alt="Plan 3">
+      <ul class="features">
+        <li>Planning Solution</li>
+        <li>10 Construction Drawings</li>
+        <li>Selection Materials</li>
+        <li>Unlimited Revision</li>
+      </ul>
+      <div class="price">$98<span>/mos</span></div>
+      <button class="start-btn">GET STARTED</button>
+    </div>
+  </div>
+</section>
+
+
+       <section class="footer-section">
+        <div class="footer-container">
+          <div class="footer-col">
+            <h2>ArchLab.</h2>
+            <p>Far far away, behind the word mountains, far from the countries.</p>
+            <div class="footer-social">
+              <i class="fa-brands fa-twitter"></i>
+              <i class="fa-brands fa-facebook-f"></i>
+              <i class="fa-brands fa-instagram"></i>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h3>Community</h3>
+            <ul>
+              <li>> Projects</li>
+              <li>> Team</li>
+              <li>> Reviews</li>
+              <li>> FAQs</li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h3>About Us</h3>
+            <ul>
+              <li>> Our Story</li>
+              <li>> Meet the team</li>
+              <li>> Careers</li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h3>Company</h3>
+            <ul>
+              <li>> About Us</li>
+              <li>> Press</li>
+              <li>> Contact</li>
+              <li>> Careers</li>
+            </ul>
+          </div>
+          <div class="footer-col contact">
+            <h3>Have a Questions?</h3>
+            <ul>
+              <li><i class="fa-solid fa-map-marker-alt"></i> 203 Fake St. Mountain View, San Francisco, California, USA</li>
+              <li><i class="fa-solid fa-phone"></i> +2 392 3929 210</li>
+              <li><i class="fa-solid fa-envelope"></i> info@yourdomain.com</li>
+            </ul>
+          </div>
+        </div>
+        <p class="footer-copy">Copyright ©2025 All rights reserved | This template is made with <i class="fa fa-heart"></i> by <span>Colorlib</span></p>
+      </section>
+
+
+
+<script src="js/script.js"></script>
+</body>
+
+</html>

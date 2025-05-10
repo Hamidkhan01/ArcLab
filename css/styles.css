@@ -1,0 +1,855 @@
+html {
+    scroll-behavior: smooth;
+}
+
+/* Hero Section Background */
+.hero-section {
+    height: 100vh;
+    background-image: url('../images/bg_1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Optional Overlay (Bright semi-transparent layer) */
+.hero-section .overlay {
+    background-color: rgba(255, 255, 255, 0.3);
+    height: 100%;
+    width: 100%;
+    padding-top: 1rem;
+}
+
+/* Navbar */
+.navbar {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    z-index: 10;
+    padding: 0 30px;
+}
+
+/* Sticky Navbar */
+/* Navbar: Transparent by default */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  background-color: transparent; /* Transparent background */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+
+/* Add shadow and white background when scrolling */
+.navbar.scrolled {
+  background-color: white; /* White background when scrolling */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Optional shadow */
+}
+
+
+
+
+.hero-section .navbar {
+    margin-top: -10px;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-top: -5px;
+}
+
+/* Navbar Links */
+.navbar-nav .nav-link {
+    margin-left: 20px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #6fbf73 !important;
+  }
+
+/* Hero Section Content */
+.hero-section h1 {
+    font-size: 3rem;
+    line-height: 1.2;
+    color: black;
+}
+
+.hero-section p {
+    font-size: 1.1rem;
+    color: #333;
+}
+
+/* Green Line before heading */
+.line {
+    width: 60px;
+    height: 4px;
+    background-color: #198754;
+}
+
+/* Play Button Circle */
+.play-btn {
+    background-color: #198754;
+    padding: 12px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+}
+
+.play-btn:hover {
+    background-color: #145c35;
+}
+
+
+
+
+.services-section {
+  padding: 6em 0;
+  position: relative;
+}
+
+.services-section .container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.services-section .row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.services-section .service-box {
+  flex: 0 0 23%;
+  display: flex;
+}
+
+.services-section .service-card {
+  background: #96bb7c;
+  color: #fff;
+  text-align: center;
+  padding: 40px 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.services-section .service-card.dark {
+  background: #8eb672;
+}
+
+.services-section .service-card.light {
+  background: #91b875;
+}
+
+.services-section .icon {
+  width: 100px;
+  font-size: 60px;
+  margin-bottom: 20px;
+}
+
+.services-section .icon span {
+  color: #fff;
+}
+
+.services-section .content h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.services-section .content p {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0;
+}
+
+@media (max-width: 991px) {
+  .services-section .service-box {
+    flex: 0 0 48%;
+  }
+}
+
+@media (max-width: 576px) {
+  .services-section .service-box {
+    flex: 0 0 100%;
+  }
+}
+
+/* Optional: Only if you want to override bg globally in this section */
+.services-section.my-green-bg {
+  background-color: #96bb7c;
+}
+
+
+/* ArcLab */
+.about-section {
+  padding: 6em 0;
+}
+
+.img,
+.img-2 {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 100%;
+  border-radius: 8px;
+}
+
+.img-overlay {
+  position: relative;
+  background-blend-mode: overlay;
+}
+
+.request-quote {
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+  padding: 30px;
+  color: #fff;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.request-quote .subheading {
+  font-size: 14px;
+  color: #ccc;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.request-quote h3 {
+  font-size: 24px;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.request-form .form-control {
+  background: #fff;
+  border: 1px solid #ccc;
+  height: 45px;
+  font-size: 16px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+}
+
+.request-form textarea.form-control {
+  height: 200px;
+}
+
+.request-form .btn {
+  background-color: #96bb7c;
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.request-form .btn:hover {
+  background-color: #85a96b;
+}
+
+.wrap-about {
+  padding: 20px;
+}
+
+.heading-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.heading-section h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #000;
+}
+
+.heading-section p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #555;
+}
+
+
+/* Counter */
+.my-counter-section {
+  background-image: url('your-background.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  padding: 5em 0;
+}
+
+.my-counter-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.my-counter-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.my-counter-item {
+  flex: 1 1 22%;
+  min-width: 200px;
+}
+
+.my-counter-box {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.my-counter-box:hover {
+  transform: translateY(-5px);
+}
+
+.my-counter-number {
+  font-size: 40px;
+  font-weight: 700;
+  color: #96bb7c;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.my-counter-content span {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+  display: inline-block;
+  text-align: center;
+}
+
+
+/* Portfolio Container */
+.portfolio-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 90%; /* Limit the container width */
+  max-width: 1200px; /* Max width to prevent it from becoming too wide */
+  margin: 0 auto; /* Center the container */
+}
+
+/* Portfolio Item */
+.portfolio-item {
+  width: 100%;
+  margin-bottom: 3rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.portfolio-img {
+  background-size: cover;
+  background-position: center;
+  height: 420px; /* Reduced height for the image */
+  width: 50%;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.portfolio-content {
+  padding: 2rem 1.5rem;
+  width: 50%;
+  text-align: left;
+}
+.heading-section {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.portfolio-content .subheading {
+  color: #368f3d;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.portfolio-content h2 a {
+  color: #000;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.portfolio-content p {
+  color: #555;
+}
+
+.portfolio-content p a {
+  color: #368f3d;
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+.view-btn {
+  color: #368f3d;
+  font-weight: 500;
+  text-decoration: underline;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.portfolio-item.reversed {
+  flex-direction: row-reverse;
+}
+
+@media (max-width: 768px) {
+  .portfolio-item {
+    flex-direction: column;
+  }
+
+  .portfolio-img {
+    height: 300px;
+    width: 100%;
+  }
+
+  .portfolio-content {
+    width: 100%;
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+}
+
+
+/* Testimonials */
+.testimonials {
+  background: #f8f9fa;
+  text-align: center;
+  padding: 80px 20px;
+  font-family: sans-serif;
+}
+
+.heading .subheading {
+  color: #8bc79a;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+  display: inline-block;
+  position: relative;
+}
+
+.heading h2 {
+  font-size: 36px;
+  margin-bottom: 40px;
+  font-weight: bold;
+  color: #333;
+}
+
+.carousel-container {
+  overflow: hidden;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.testimonial-card {
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  margin: 0 10px;
+  padding: 30px;
+  flex: 0 0 33.3333%;
+  box-sizing: border-box;
+  text-align: left;
+  position: relative;
+}
+
+.quote-icon {
+  font-size: 40px;
+  color: #8bc79a;
+  position: absolute;
+  top: 20px;
+  left: 30px;
+}
+
+.testimonial-card p {
+  margin-top: 40px;
+  color: #555;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.client-info {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.client-info img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-right: 15px;
+  object-fit: cover;
+}
+
+.client-info strong {
+  display: block;
+  font-size: 16px;
+  color: #333;
+}
+
+.client-info span {
+  font-size: 14px;
+  color: #aaa;
+}
+
+.carousel-dots {
+  margin-top: 30px;
+}
+
+.dot {
+  height: 10px;
+  width: 10px;
+  margin: 0 6px;
+  background-color: #ddd;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.dot.active {
+  background-color: #8bc79a;
+}
+
+
+
+
+/* Pricing Section Styles */
+.ftco-section.pricing-section {
+  padding: 70px 0;
+}
+
+.pricing-section .heading-section {
+  text-align: center;
+}
+
+.pricing-section h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-top: 20px;
+}
+
+.pricing-section .subheading {
+  font-size: 18px;
+  color: #7f8c8d;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.pricing-section .row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.pricing-section .col-md-4 {
+  width: 100%;
+  max-width: 33.33%;
+  padding: 0;
+}
+
+.pricing-section .block-7 {
+  border: 1px solid #e1e1e1;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  /* Ensure the blocks are the same height */
+}
+
+.pricing-section .block-7:hover {
+  transform: translateY(-10px);
+}
+
+/* Fixed height for images */
+.pricing-section .block-7 img {
+  height: 200px; /* Fixed height */
+  width: 100%; /* Ensure images fill the width */
+  object-fit: cover; /* Crop images to fill the container */
+}
+
+/* Add a wrapper around the content to ensure equal height */
+.pricing-section {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #fff;
+  font-family: sans-serif;
+}
+
+.section-subtitle {
+  color: #9abf9a;
+  font-size: 12px;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.section-title {
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.pricing-cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.pricing-card {
+  width: 260px;
+  background-color: #fff;
+  border-radius: 6px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.08);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pricing-card img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+}
+
+.features {
+  list-style: none;
+  padding: 20px;
+  text-align: left;
+  color: #444;
+  font-size: 14px;
+  margin: 0;
+}
+
+.features li {
+  margin: 10px 0;
+  position: relative;
+  padding-left: 20px;
+}
+
+.features li::before {
+  content: '✔';
+  position: absolute;
+  left: 0;
+  color: #8ac38b;
+}
+
+.price {
+  font-size: 28px;
+  font-weight: bold;
+  color: #222;
+  margin: 10px 0;
+}
+
+.price span {
+  font-size: 12px;
+  font-weight: normal;
+  color: #555;
+  margin-left: 5px;
+}
+
+.start-btn {
+  background-color: #8ac38b;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 13px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+
+
+/* Blog */
+.blog-section {
+  padding: 60px 0;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.section-title span {
+  display: block;
+  font-size: 14px;
+  color: #8bc34a;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  position: relative;
+}
+.section-title span::after {
+  content: '';
+  width: 50px;
+  height: 2px;
+  background: #8bc34a;
+  position: absolute;
+  left: 50%;
+  bottom: -5px;
+  transform: translateX(-50%);
+}
+.section-title h2 {
+  font-size: 36px;
+  margin-top: 10px;
+  color: #333;
+}
+
+.blog-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.blog-card {
+  width: 250px;
+  text-align: left;
+}
+
+.blog-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.meta {
+  font-size: 12px;
+  color: #888;
+  margin-top: 10px;
+}
+.meta span {
+  margin-right: 8px;
+}
+.meta i {
+  margin-right: 3px;
+}
+
+.blog-card h3 {
+  font-size: 16px;
+  color: #222;
+  margin-top: 10px;
+  line-height: 1.5;
+}
+
+
+.footer-section {
+  background: #11111a;
+  color: #888;
+  padding: 60px 40px 30px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.footer-col {
+  flex: 1 1 160px;
+  min-width: 160px;
+}
+
+.footer-col h2 {
+  color: #fff;
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.footer-col h3 {
+  color: #fff;
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+.footer-col p {
+  max-width: 200px;
+  line-height: 1.6;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 10px;
+  color: #888;
+  cursor: pointer;
+}
+
+.footer-col ul li i {
+  margin-right: 10px;
+}
+
+.footer-social {
+  margin-top: 20px;
+}
+
+.footer-social i {
+  font-size: 16px;
+  color: #fff;
+  margin-right: 10px;
+  background: #1e1e2a;
+  padding: 8px;
+  border-radius: 50%;
+}
+
+.footer-copy {
+  text-align: center;
+  color: #888;
+  font-size: 13px;
+  margin-top: 40px;
+}
+
+.footer-copy i {
+  color: #fff;
+}
+
+.footer-copy span {
+  color: #9acd32;
+  font-weight: 500;
+}
