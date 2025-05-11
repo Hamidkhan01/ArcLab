@@ -321,50 +321,6 @@ html {
   line-height: 1.8;
   color: #555;
 }
-@media (max-width: 768px) {
-  .about-section {
-    padding: 3em 1em;
-  }
-
-  .wrap-about {
-    padding: 10px;
-  }
-
-  .heading-section h2 {
-    font-size: 28px;
-    text-align: center;
-  }
-
-  .heading-section p {
-    font-size: 15px;
-    text-align: center;
-  }
-
-  .img,
-  .img-2 {
-    height: 250px;
-    border-radius: 6px;
-  }
-
-  .request-quote {
-    padding: 20px;
-    text-align: center;
-  }
-
-  .request-quote h3 {
-    font-size: 20px;
-  }
-
-  .request-form .form-control,
-  .request-form textarea.form-control {
-    font-size: 15px;
-    height: auto;
-  }
-
-  .request-form .btn {
-    width: 100%;
-  }
-}
 
 
 /* Counter */
@@ -514,28 +470,40 @@ html {
     text-align: center;
   }
 }
-@media (max-width: 576px) {
+/* Responsive Fixes for Portfolio Section Only */
+@media (max-width: 992px) {
   .portfolio-item {
     flex-direction: column;
     margin-bottom: 2rem;
   }
 
+  .portfolio-img,
+  .portfolio-content {
+    width: 100%;
+  }
+
   .portfolio-img {
-    height: 220px;
+    height: 300px;
+    margin-bottom: 1rem;
   }
 
   .portfolio-content {
-    padding: 1.5rem 1rem;
+    text-align: center;
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .portfolio-img {
+    height: 200px;
   }
 
-  .portfolio-content h2 {
+  .portfolio-content h2 a {
     font-size: 20px;
   }
 
-  .portfolio-content p {
-    font-size: 14px;
-  }
-
+  .portfolio-content p,
+  .portfolio-content p a,
   .view-btn {
     font-size: 14px;
   }
@@ -648,40 +616,6 @@ html {
   background-color: #8bc79a;
 }
 
-@media (max-width: 768px) {
-  .testimonial-card {
-    flex: 0 0 100%;
-    margin: 10px 0;
-    padding: 20px;
-  }
-
-  .carousel-track {
-    flex-direction: column;
-  }
-
-  .client-info {
-    flex-direction: row;
-    align-items: flex-start;
-  }
-
-  .quote-icon {
-    font-size: 30px;
-    top: 15px;
-    left: 20px;
-  }
-
-  .testimonial-card p {
-    font-size: 15px;
-  }
-
-  .heading h2 {
-    font-size: 28px;
-  }
-
-  .carousel-container {
-    padding: 0 10px;
-  }
-}
 
 
 
