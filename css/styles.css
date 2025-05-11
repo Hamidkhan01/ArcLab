@@ -73,54 +73,55 @@ html {
 }
  
 
-
+*/
 .nav-link:hover {
     color: #6fbf73 !important;
   }
 
- /* Mobile navbar styles only */
-@media (max-width: 991px) {
-  
-  /* Customize the "MENU" button */
+ @media (max-width: 991px) {
   .custom-toggler {
     background-color: black;
     color: white;
     padding: 6px 12px;
     border: none;
+    border-radius: 4px;
     font-size: 16px;
     font-weight: bold;
   }
 
-  /* This ensures that the navbar expands below the brand block */
   .navbar-collapse {
-    background-color: black; /* Background of the expanded menu */
-    width: 100vw; /* Full-width for mobile */
-    padding: 1rem; /* Padding around the menu */
-    
-    margin-top: 10px; /* Small gap for better spacing */
+    background-color: rgb(0, 0, 0);
+    width: 100vw;
+    margin: 0;
+    padding: 1rem;
   }
 
-  /* Make the navbar links stack vertically */
   .navbar-nav {
     flex-direction: column;
     align-items: flex-start;
-    padding-left: 0; /* No left padding */
+    padding-left: 0;
   }
 
-  /* Space between menu items */
   .navbar-nav .nav-item {
-    margin: 10px 0; /* Vertical spacing between links */
+    margin: 8px 0;
   }
 
-  /* Styling the links inside the expanded menu */
   .navbar-nav .nav-link {
     font-size: 16px;
-    color: white; /* White text */
+    color: white; /* Make links white initially */
     padding: 0;
+    text-align: left;
+    transition: color 0.3s ease;
+  }
+
+  .navbar-nav .nav-link:hover,
+  .navbar-nav .nav-link:focus,
+  .navbar-nav .nav-link.active {
+    color: #6fbf73 !important; /* Turn green on click or focus */
   }
 }
 
-  
+
 
 /* Hero Section Content */
 .hero-section h1 {
