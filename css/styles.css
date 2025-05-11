@@ -78,7 +78,7 @@ html {
     color: #6fbf73 !important;
   }
 
- @media (max-width: 991px) {
+@media (max-width: 991px) {
   .custom-toggler {
     background-color: black;
     color: white;
@@ -108,7 +108,7 @@ html {
 
   .navbar-nav .nav-link {
     font-size: 16px;
-    color: white; /* Make links white initially */
+    color: white !important; /* Force white color */
     padding: 0;
     text-align: left;
     transition: color 0.3s ease;
@@ -117,9 +117,10 @@ html {
   .navbar-nav .nav-link:hover,
   .navbar-nav .nav-link:focus,
   .navbar-nav .nav-link.active {
-    color: #6fbf73 !important; /* Turn green on click or focus */
+    color: #6fbf73 !important; /* Green on click/focus/hover */
   }
 }
+
 
 
 
