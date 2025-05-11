@@ -78,30 +78,44 @@ html {
     color: #6fbf73 !important;
   }
 
-  @media (max-width: 991px) {
-  .navbar-nav {
-    flex-direction: column;
-    align-items: flex-start;
-    padding-left: 1rem;
-  }
-
-  .navbar-nav .nav-item {
-    margin: 10px 0;
-  }
-
+ @media (max-width: 991px) {
   .custom-toggler {
-    font-weight: bold;
-    color: black;
-    background: none;
+    background-color: black;
+    color: white;
+    padding: 6px 12px;
     border: none;
-    font-size: 1rem;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: bold;
   }
 
   .navbar-collapse {
-    background-color: white; /* Optional: match your design */
+    background-color: white;
+    width: 100vw;
+    margin: 0;
     padding: 1rem;
   }
+
+  .navbar-nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 0;
+  }
+
+  .navbar-nav .nav-item {
+    margin: 8px 0;
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 16px;
+    color: black;
+    padding: 0;
+  }
 }
+
+.nav-link:hover {
+    color: #6fbf73 !important;
+  }
 
 /* Hero Section Content */
 .hero-section h1 {
