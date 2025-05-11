@@ -91,14 +91,14 @@ html {
 
   .custom-toggler {
     font-weight: bold;
-    color: black;
+    color: rgb(255, 255, 255);
     background: none;
     border: none;
     font-size: 1rem;
   }
 
   .navbar-collapse {
-    background-color: white; /* Optional: match your design */
+    background-color: rgb(0, 0, 0); /* Optional: match your design */
     padding: 1rem;
   }
 }
