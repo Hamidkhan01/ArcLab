@@ -78,67 +78,50 @@ html {
     color: #6fbf73 !important;
   }
 
- /* Mobile navbar styles only */
-@media (max-width: 991px) {
-  
-  /* Customize the "MENU" button */
-  .custom-toggler {
-    background-color: black;  /* Button background black */
-    color: white;  /* Text color white */
-    padding: 6px 12px;
-    border: none;
-    font-size: 16px;
-    font-weight: bold;
-  }
-
-  /* Container where brand and button are */
+ @media (max-width: 991px) {
   .container {
-    background-color: black;  /* Entire container background */
-    padding: 1rem 0;  /* Padding on top/bottom */
+    background-color: black;
   }
 
-  /* Navbar collapse behavior when the menu is expanded */
+  .navbar-brand,
+  .custom-toggler {
+    color: white !important;
+  }
+
+  .custom-toggler {
+    background: none;
+    border: none;
+    font-weight: bold;
+    font-size: 1rem;
+  }
+
   .navbar-collapse {
-    background-color: black;  /* Black background for the expanded menu */
-    width: 100vw;  /* Full width of the screen */
-    padding: 1rem 0;  /* Padding around the expanded menu */
-    position: absolute;  /* Make it fixed at the top when expanded */
-    top: 100%;  /* Position it just below the "MENU" button */
-    left: 0;
-    right: 0;
+    background-color: black;
+    padding: 1rem 0;
   }
 
-  /* Stack navbar items vertically */
   .navbar-nav {
     flex-direction: column;
     align-items: flex-start;
-    padding-left: 0; /* No padding from left */
+    padding-left: 0;
   }
 
-  /* Navbar items spacing */
   .navbar-nav .nav-item {
-    margin: 12px 0;  /* Vertical spacing between links */
+    margin: 10px 0;
   }
 
-  /* Styling for nav links */
   .navbar-nav .nav-link {
-    font-size: 18px;  /* Slightly bigger font */
-    color: white;  /* Default white color */
-    padding: 0.5rem 1rem;  /* Some padding for better clickability */
-    transition: color 0.3s ease;  /* Smooth color change */
+    color: white;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease;
+    text-align: left;
   }
 
-  /* Change color of nav links on hover/click */
   .navbar-nav .nav-link:hover,
   .navbar-nav .nav-link:focus,
   .navbar-nav .nav-link.active {
-    color: #6fbf73 !important;  /* Green color when clicked or hovered */
-  }
-
-  /* Ensure the menu is aligned properly */
-  .navbar-nav .nav-item a {
-    display: block;  /* Ensures the links occupy full width */
-    text-align: left;  /* Align text to the left */
+    color: #6fbf73 !important;
   }
 }
 
