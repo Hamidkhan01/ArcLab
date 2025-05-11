@@ -232,7 +232,7 @@ html {
 
 
 /* ArcLab */
-/* ArcLab */
+/* General styles */
 .about-section {
   padding: 6em 0;
 }
@@ -323,84 +323,55 @@ html {
   color: #555;
 }
 
-/* Media query for mobile */
+/* Media Queries */
 @media (max-width: 767.98px) {
-  /* Stack columns vertically */
+  /* Stack the images and text on top of each other */
   .about-section .row {
     flex-direction: column;
   }
 
-  .col-lg-7,
-  .col-lg-5 {
+  /* Ensure full-width for columns */
+  .col-lg-7, .col-lg-5 {
     max-width: 100%;
     flex: 0 0 100%;
   }
 
-  /* Adjust heading section */
-  .heading-section {
-    padding: 0 15px;
-    text-align: center;
-    margin-top: 1rem;
-  }
-
-  .heading-section h2 {
-    font-size: 28px; /* Slightly smaller heading */
-  }
-
-  .heading-section p {
-    font-size: 14px;
-    margin-top: 0.5rem;
-  }
-
-  /* Image section */
-  .img,
-  .img-2 {
-    height: 250px;
+  /* Adjust image height for mobile */
+  .img, .img-2 {
+    height: 250px; /* Adjust height for mobile */
     margin-bottom: 1rem;
+  }
+
+  /* Padding adjustments */
+  .wrap-about {
+    padding: 1rem 1.5rem;
+  }
+
+  .heading-section {
+    padding: 0;
     margin-top: 1rem;
   }
 
-  /* Request quote section */
+  /* Ensure form elements take full width and have spacing */
   .request-quote {
     padding: 20px 15px;
   }
 
-  /* Wrap-about section: stack items vertically */
-  .wrap-about {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 1rem 1.5rem;
-  }
-
-  /* Ensure form is centered on mobile */
-  .request-form {
-    max-width: 100%;
-    padding: 10px;
-    text-align: center;
-  }
-}
-
-@media (max-width: 575.98px) {
-  /* Adjust font sizes for extra small screens */
-  .heading-section h2 {
-    font-size: 24px;
-  }
-
-  .heading-section p {
-    font-size: 12px;
-  }
-
-  .request-form .form-control {
-    font-size: 14px;
-  }
-
+  .request-form .form-control,
   .request-form .btn {
-    font-size: 14px;
-    padding: 8px 16px;
+    width: 100%; /* Make the inputs and button span the full width */
+    margin-bottom: 10px;
+  }
+
+  /* Adjust font sizes for better readability on mobile */
+  .request-quote h3 {
+    font-size: 20px; /* Slightly smaller heading */
+  }
+
+  .request-quote .subheading {
+    font-size: 12px; /* Adjust subheading font size */
   }
 }
-
 
 
 /* Counter */
