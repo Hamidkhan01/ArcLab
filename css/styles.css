@@ -78,44 +78,48 @@ html {
     color: #6fbf73 !important;
   }
 
- @media (max-width: 991px) {
+ /* Mobile navbar styles only */
+@media (max-width: 991px) {
+  
+  /* Customize the "MENU" button */
   .custom-toggler {
-    background-color: rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
+    background-color: black;
+    color: white;
     padding: 6px 12px;
     border: none;
-    border-radius: 4px;
     font-size: 16px;
     font-weight: bold;
   }
 
+  /* This ensures that the navbar expands below the brand block */
   .navbar-collapse {
-    background-color: rgb(0, 0, 0);
-    width: 100vw;
-    margin: 0;
-    padding: 1rem;
+    background-color: black; /* Background of the expanded menu */
+    width: 100vw; /* Full-width for mobile */
+    padding: 1rem; /* Padding around the menu */
+    margin-top: 10px; /* Small gap for better spacing */
   }
 
+  /* Make the navbar links stack vertically */
   .navbar-nav {
     flex-direction: column;
     align-items: flex-start;
-    padding-left: 0;
+    padding-left: 0; /* No left padding */
   }
 
+  /* Space between menu items */
   .navbar-nav .nav-item {
-    margin: 8px 0;
+    margin: 10px 0; /* Vertical spacing between links */
   }
 
+  /* Styling the links inside the expanded menu */
   .navbar-nav .nav-link {
     font-size: 16px;
-    color: #6fbf73;
+    color: white; /* White text */
     padding: 0;
-    text-align: left;
-  }
-  .nav-link:hover {
-    color: #6fbf73 !important;
   }
 }
+
+  
 
 /* Hero Section Content */
 .hero-section h1 {
