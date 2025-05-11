@@ -99,19 +99,27 @@
     margin: 10px 0;
   }
 
+  /* Button always black */
   .custom-toggler {
     font-weight: bold;
-    color: rgb(255, 255, 255);
+    color: white;
     background: black;
     border: none;
     font-size: 1rem;
   }
 
+  /* Menu area when expanded */
   .navbar-collapse {
-    background-color: rgb(0, 0, 0); /* Optional: match your design */
+    background-color: black;
     padding: 1rem;
   }
+
+  /* Links become white when menu is open */
+  .navbar-collapse .nav-link {
+    color: white !important;
+  }
 }
+
 
 /* General Hero Section */
 .hero-wrap {
