@@ -86,7 +86,7 @@
     color: #6fbf73 !important;
   }
 
-  @media (max-width: 991px) {
+ @media (max-width: 991px) {
   .navbar-nav {
     flex-direction: column;
     align-items: flex-start;
@@ -97,19 +97,27 @@
     margin: 10px 0;
   }
 
+
   .custom-toggler {
     font-weight: bold;
-    color: black;
+    color: rgb(0, 0, 0);
     background: none;
     border: none;
     font-size: 1rem;
   }
 
+
   .navbar-collapse {
-    background-color: white; /* Optional: match your design */
+    background-color: black;
     padding: 1rem;
   }
+
+  /* Links become white when menu is open */
+  .navbar-collapse .nav-link {
+    color: white !important;
+  }
 }
+
 
 /* General Hero Section */
 .hero-wrap {

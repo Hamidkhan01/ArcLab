@@ -89,19 +89,26 @@ html {
     margin: 10px 0;
   }
 
+
   .custom-toggler {
     font-weight: bold;
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     background: none;
     border: none;
     font-size: 1rem;
   }
 
+
   .navbar-collapse {
-    background-color: rgb(0, 0, 0); /* Optional: match your design */
+    background-color: black;
     padding: 1rem;
   }
+
+  .navbar-collapse .nav-link {
+    color: white !important;
+  }
 }
+
 
 
 
