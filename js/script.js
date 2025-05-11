@@ -1,6 +1,3 @@
-
-
-// Optional: For interactive actions or scroll effects in future
 console.log("Script loaded.");
 
 
@@ -32,34 +29,34 @@ document.querySelector('form').addEventListener('submit', function(event) {
   let phone = document.querySelector('input[placeholder="Phone"]');
   let message = document.querySelector('textarea');
   
-  // Validate First Name and Last Name
+
   if (!firstName.value.trim()) {
-      event.preventDefault();  // Prevent form submission
+      event.preventDefault();  
       alert("Please enter your first name.");
       return;
   }
 
   if (!lastName.value.trim()) {
-      event.preventDefault();  // Prevent form submission
+      event.preventDefault();  
       alert("Please enter your last name.");
       return;
   }
 
-  // Validate Service Selection
+
   if (service.value === "") {
-      event.preventDefault();  // Prevent form submission
+      event.preventDefault();  
       alert("Please select a service.");
       return;
   }
 
-  // Validate Phone Number (10 digits)
+
   if (!phone.value.match(/^\d{10}$/)) {
-      event.preventDefault();  // Prevent form submission
+      event.preventDefault();  
       alert("Phone number must be 10 digits.");
       return;
   }
 
-  // Validate Message
+
   if (!message.value.trim()) {
       event.preventDefault();  // Prevent form submission
       alert("Please enter a message.");
@@ -69,7 +66,7 @@ document.querySelector('form').addEventListener('submit', function(event) {
 
 
 
-// JS code here only (no <script> tags)
+
 document.addEventListener("DOMContentLoaded", () => {
   let counters = document.querySelectorAll(".my-counter-number");
   let triggered = false;

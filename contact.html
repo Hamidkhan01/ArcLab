@@ -29,7 +29,7 @@
     flex-direction: column;
 }
 
-/* Optional Overlay (Bright semi-transparent layer) */
+
 .hero-section .overlay {
     background-color: rgba(255, 255, 255, 0.3);
     height: 100%;
@@ -46,7 +46,7 @@
 }
 
 /* Sticky Navbar */
-/* Navbar: Transparent by default */
+
 .navbar {
   position: fixed;
   top: 0;
@@ -58,10 +58,9 @@
 
 
 
-/* Add shadow and white background when scrolling */
 .navbar.scrolled {
-  background-color: white; /* White background when scrolling */
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Optional shadow */
+  background-color: white; 
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); 
 }
 
 
@@ -99,19 +98,27 @@
     margin: 10px 0;
   }
 
+
   .custom-toggler {
     font-weight: bold;
-    color: black;
+    color: rgb(0, 0, 0);
     background: none;
     border: none;
     font-size: 1rem;
   }
 
+
   .navbar-collapse {
-    background-color: white; /* Optional: match your design */
+    background-color: black;
     padding: 1rem;
   }
+
+
+  .navbar-collapse .nav-link {
+    color: white !important;
+  }
 }
+
 
 /* General Hero Section */
 .hero-wrap {
@@ -130,12 +137,12 @@
   left: 0;
   height: 100%;
   width: 100%;
-  background: rgba(0, 0, 0, 0.5); /* Optional overlay */
+  background: rgba(0, 0, 0, 0.5); 
 }
 
-/* Second Variation */
+
 .hero-wrap-2 {
-  height: 400px; /* Often shorter for inner pages */
+  height: 400px; 
   position: relative;
   background-size: cover;
   background-repeat: no-repeat;
@@ -148,14 +155,14 @@
 }
 
 
-/* Contact Form Styling */
+/* Contact Form  */
 .contact-form {
   background-color: #f8f9fa;
   padding: 2rem;
   border-radius: 0.5rem;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
-  max-width: 600px; /* Adjust the width here */
-  margin: 0 auto;    /* Center the form horizontally */
+  max-width: 600px; 
+  margin: 0 auto;    
 }
 
 .contact-form .form-control {
@@ -227,7 +234,7 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Optional: Add border between center column */
+
 .border-height {
   border-left: 1px solid #ddd;
   border-right: 1px solid #ddd;
@@ -377,7 +384,7 @@ a:hover {
 
    
       <div id="top"></div>
-      <!-- Navbar Section: Now placed outside the Hero Section -->
+
       <nav class="navbar navbar-expand-lg navbar-light py-3">
   <div class="container">
     <a class="navbar-brand text-black fw-bold" href="#">ArcLab.</a>
@@ -386,7 +393,7 @@ a:hover {
         aria-label="Toggle navigation">
       MENU
     </button>
-    <!-- This collapses when menu is clicked -->
+
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item"><a class="nav-link text-black active" href="index.html">Home</a></li>
@@ -401,9 +408,9 @@ a:hover {
   </div>
 </nav>
 
-      <!-- Hero Section with Navbar included inside it -->
+    
    <section class="hero-section">
-    <div class="overlay"> <!-- Optional dark overlay -->
+    <div class="overlay"> 
       <div class="container">
         <div class="row no-gutters slider-text js-fullheight align-items-end" style="height: 520px;">
           <div class="col-md-9 ftco-animate pb-5 fadeInUp ftco-animated">

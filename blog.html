@@ -29,7 +29,6 @@
     flex-direction: column;
 }
 
-/* Optional Overlay (Bright semi-transparent layer) */
 .hero-section .overlay {
     background-color: rgba(255, 255, 255, 0.3);
     height: 100%;
@@ -46,22 +45,22 @@
 }
 
 /* Sticky Navbar */
-/* Navbar: Transparent by default */
+
 .navbar {
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 999;
-  background-color: transparent; /* Transparent background */
+  background-color: transparent;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 
 
-/* Add shadow and white background when scrolling */
+
 .navbar.scrolled {
-  background-color: white; /* White background when scrolling */
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Optional shadow */
+  background-color: white; 
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); 
 }
 
 
@@ -99,7 +98,7 @@
     margin: 10px 0;
   }
 
-  /* Button always black */
+
   .custom-toggler {
     font-weight: bold;
     color: rgb(0, 0, 0);
@@ -108,13 +107,13 @@
     font-size: 1rem;
   }
 
-  /* Menu area when expanded */
+
   .navbar-collapse {
     background-color: black;
     padding: 1rem;
   }
 
-  /* Links become white when menu is open */
+
   .navbar-collapse .nav-link {
     color: white !important;
   }
@@ -141,9 +140,9 @@
   background: rgba(0, 0, 0, 0.5); /* Optional overlay */
 }
 
-/* Second Variation */
+
 .hero-wrap-2 {
-  height: 400px; /* Often shorter for inner pages */
+  height: 400px; 
   position: relative;
   background-size: cover;
   background-repeat: no-repeat;
@@ -266,7 +265,7 @@
   color: #fff;
 }
 
-/* Responsive Design */
+
 @media (max-width: 768px) {
   .blog-col {
     flex: 0 0 48%;
@@ -392,7 +391,7 @@
 
    <section>
       <div id="top"></div>
-      <!-- Navbar Section: Now placed outside the Hero Section -->
+     
       <nav class="navbar navbar-expand-lg navbar-light py-3">
   <div class="container">
     <a class="navbar-brand text-black fw-bold" href="#">ArcLab.</a>
@@ -401,7 +400,7 @@
         aria-label="Toggle navigation">
       MENU
     </button>
-    <!-- This collapses when menu is clicked -->
+   
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item"><a class="nav-link text-black active" href="index.html">Home</a></li>
@@ -416,9 +415,9 @@
   </div>
 </nav>
     </section>
-      <!-- Hero Section with Navbar included inside it -->
+  
    <section class="hero-section">
-    <div class="overlay"> <!-- Optional dark overlay -->
+    <div class="overlay"> 
       <div class="container">
         <div class="row no-gutters slider-text js-fullheight align-items-end" style="height: 520px;">
           <div class="col-md-9 ftco-animate pb-5 fadeInUp ftco-animated">
@@ -627,8 +626,7 @@
         <p class="footer-copy">Copyright ©2025 All rights reserved | This template is made with <i class="fa fa-heart"></i> by <span>Colorlib</span></p>
       </section>
       
-      <!-- Font Awesome -->
-      <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
 
 
  
