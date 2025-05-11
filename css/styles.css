@@ -322,9 +322,10 @@ html {
   color: #555;
 }
 
+/* Media query for mobile */
 @media (max-width: 767.98px) {
   .about-section .row {
-    flex-direction: column;
+    flex-direction: column; /* Stack the columns vertically */
   }
 
   .col-lg-7,
@@ -333,47 +334,51 @@ html {
     flex: 0 0 100%;
   }
 
+  /* Heading section: text should be first */
   .heading-section {
     padding: 0 15px;
     margin-top: 1.5rem;
+    text-align: center;
   }
 
-  .img,
-  .img-2 {
-    height: 200px;
-    margin-bottom: 1rem;
+  .heading-section h2 {
+    font-size: 28px; /* Slightly smaller heading */
   }
 
-  .request-quote {
-    padding: 20px 15px;
-  }
-}
-@media (max-width: 767.98px) {
-  .about-section .row {
-    flex-direction: column;
+  .heading-section p {
+    font-size: 14px; /* Adjust text size for mobile */
+    margin-top: 0.5rem;
   }
 
-  .col-lg-7,
-  .col-lg-5 {
-    max-width: 100%;
-    flex: 0 0 100%;
-  }
-
+  /* Image section */
   .img,
   .img-2 {
     height: 250px;
     margin-bottom: 1rem;
+    margin-top: 1rem;
   }
 
+  /* Form section */
+  .request-quote {
+    padding: 20px 15px;
+  }
+
+  /* Ensure image, text, and form are in correct order */
   .wrap-about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 1rem 1.5rem;
   }
 
-  .heading-section {
-    padding: 0;
-    margin-top: 1rem;
+  /* Optional: To make form centered on mobile */
+  .request-form {
+    max-width: 100%;
+    padding: 10px;
+    text-align: center;
   }
 }
+
 
 /* Counter */
 .my-counter-section {
@@ -586,7 +591,15 @@ html {
   }
 }
 
+@media (max-width: 768px) {
+  .portfolio-item {
+    flex-direction: column !important; 
+  }
 
+  .portfolio-item.reversed {
+    flex-direction: column !important; 
+  }
+}
 
 /* Testimonials */
 .testimonials {
