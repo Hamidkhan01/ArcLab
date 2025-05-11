@@ -4,23 +4,19 @@
 console.log("Script loaded.");
 
 
-document.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', function (e) {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
+  document.getElementById("menu-btn").addEventListener("click", () => {
+    document.getElementById("mobile-nav").classList.toggle("show");
   });
 
-
-  window.addEventListener('scroll', function () {
-    const navbar = document.querySelector('.navbar');
+  window.addEventListener("scroll", () => {
+    const navbar = document.querySelector(".navbar");
     if (window.scrollY > 50) {
-        navbar.classList.add('scrolled');
-        navbar.classList.remove('transparent');
+      navbar.classList.add("scrolled");
     } else {
-        navbar.classList.remove('scrolled');
-        navbar.classList.add('transparent');
+      navbar.classList.remove("scrolled");
     }
-});
+  });
+
 
 document.querySelector('form').addEventListener('submit', function(event) {
   // Get form elements
