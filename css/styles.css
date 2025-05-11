@@ -232,6 +232,7 @@ html {
 
 
 /* ArcLab */
+/* ArcLab */
 .about-section {
   padding: 6em 0;
 }
@@ -324,8 +325,9 @@ html {
 
 /* Media query for mobile */
 @media (max-width: 767.98px) {
+  /* Stack columns vertically */
   .about-section .row {
-    flex-direction: column; /* Stack the columns vertically */
+    flex-direction: column;
   }
 
   .col-lg-7,
@@ -334,11 +336,11 @@ html {
     flex: 0 0 100%;
   }
 
-  /* Heading section: text should be first */
+  /* Adjust heading section */
   .heading-section {
     padding: 0 15px;
-    margin-top: 1.5rem;
     text-align: center;
+    margin-top: 1rem;
   }
 
   .heading-section h2 {
@@ -346,7 +348,7 @@ html {
   }
 
   .heading-section p {
-    font-size: 14px; /* Adjust text size for mobile */
+    font-size: 14px;
     margin-top: 0.5rem;
   }
 
@@ -358,12 +360,12 @@ html {
     margin-top: 1rem;
   }
 
-  /* Form section */
+  /* Request quote section */
   .request-quote {
     padding: 20px 15px;
   }
 
-  /* Ensure image, text, and form are in correct order */
+  /* Wrap-about section: stack items vertically */
   .wrap-about {
     display: flex;
     flex-direction: column;
@@ -371,13 +373,34 @@ html {
     padding: 1rem 1.5rem;
   }
 
-  /* Optional: To make form centered on mobile */
+  /* Ensure form is centered on mobile */
   .request-form {
     max-width: 100%;
     padding: 10px;
     text-align: center;
   }
 }
+
+@media (max-width: 575.98px) {
+  /* Adjust font sizes for extra small screens */
+  .heading-section h2 {
+    font-size: 24px;
+  }
+
+  .heading-section p {
+    font-size: 12px;
+  }
+
+  .request-form .form-control {
+    font-size: 14px;
+  }
+
+  .request-form .btn {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
+
 
 
 /* Counter */
