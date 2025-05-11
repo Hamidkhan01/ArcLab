@@ -73,7 +73,7 @@ html {
 }
  
 
-*/
+
 .nav-link:hover {
     color: #6fbf73 !important;
   }
@@ -83,41 +83,65 @@ html {
   
   /* Customize the "MENU" button */
   .custom-toggler {
-    background-color: black;
-    color: white;
+    background-color: black;  /* Button background black */
+    color: white;  /* Text color white */
     padding: 6px 12px;
     border: none;
     font-size: 16px;
     font-weight: bold;
   }
 
-  /* This ensures that the navbar expands below the brand block */
-  .navbar-collapse {
-    background-color: black; /* Background of the expanded menu */
-    width: 100vw; /* Full-width for mobile */
-    padding: 1rem; /* Padding around the menu */
-    margin-top: 10px; /* Small gap for better spacing */
+  /* Container where brand and button are */
+  .container {
+    background-color: black;  /* Entire container background */
+    padding: 1rem 0;  /* Padding on top/bottom */
   }
 
-  /* Make the navbar links stack vertically */
+  /* Navbar collapse behavior when the menu is expanded */
+  .navbar-collapse {
+    background-color: black;  /* Black background for the expanded menu */
+    width: 100vw;  /* Full width of the screen */
+    padding: 1rem 0;  /* Padding around the expanded menu */
+    position: absolute;  /* Make it fixed at the top when expanded */
+    top: 100%;  /* Position it just below the "MENU" button */
+    left: 0;
+    right: 0;
+  }
+
+  /* Stack navbar items vertically */
   .navbar-nav {
     flex-direction: column;
     align-items: flex-start;
-    padding-left: 0; /* No left padding */
+    padding-left: 0; /* No padding from left */
   }
 
-  /* Space between menu items */
+  /* Navbar items spacing */
   .navbar-nav .nav-item {
-    margin: 10px 0; /* Vertical spacing between links */
+    margin: 12px 0;  /* Vertical spacing between links */
   }
 
-  /* Styling the links inside the expanded menu */
+  /* Styling for nav links */
   .navbar-nav .nav-link {
-    font-size: 16px;
-    color: white; /* White text */
-    padding: 0;
+    font-size: 18px;  /* Slightly bigger font */
+    color: white;  /* Default white color */
+    padding: 0.5rem 1rem;  /* Some padding for better clickability */
+    transition: color 0.3s ease;  /* Smooth color change */
+  }
+
+  /* Change color of nav links on hover/click */
+  .navbar-nav .nav-link:hover,
+  .navbar-nav .nav-link:focus,
+  .navbar-nav .nav-link.active {
+    color: #6fbf73 !important;  /* Green color when clicked or hovered */
+  }
+
+  /* Ensure the menu is aligned properly */
+  .navbar-nav .nav-item a {
+    display: block;  /* Ensures the links occupy full width */
+    text-align: left;  /* Align text to the left */
   }
 }
+
 
   
 
