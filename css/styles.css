@@ -193,7 +193,7 @@ html {
 .services-section.my-green-bg {
   background-color: #96bb7c;
 }
-
+/*
 @media (max-width: 991.98px) {
   .navbar-collapse {
     background-color: white;
@@ -209,6 +209,7 @@ html {
     display: block !important;
   }
 }
+  */
 
 /* ArcLab */
 .about-section {
