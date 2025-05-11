@@ -244,6 +244,7 @@ html {
   background-position: center center;
   height: 100%;
   border-radius: 8px;
+  width: 100%; /* Ensure the image takes the full width */
 }
 
 .img-overlay {
@@ -328,18 +329,21 @@ html {
   /* Stack the images and text on top of each other */
   .about-section .row {
     flex-direction: column;
+    align-items: center; /* Center-align the content */
   }
 
-  /* Ensure full-width for columns */
+  /* Ensure full-width for columns and align items properly */
   .col-lg-7, .col-lg-5 {
     max-width: 100%;
     flex: 0 0 100%;
+    padding: 0 15px; /* Add some padding for spacing */
   }
 
   /* Adjust image height for mobile */
-  .img, .img-2 {
+  .img,
+  .img-2 {
     height: 250px; /* Adjust height for mobile */
-    margin-bottom: 1rem;
+    margin-bottom: 1rem; /* Space between image and text */
   }
 
   /* Padding adjustments */
