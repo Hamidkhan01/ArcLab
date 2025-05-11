@@ -194,6 +194,21 @@ html {
   background-color: #96bb7c;
 }
 
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    background-color: white;
+    padding: 1rem;
+    z-index: 9999;
+  }
+
+  .navbar-collapse.collapse:not(.show) {
+    display: none !important;
+  }
+
+  .navbar-collapse.collapse.show {
+    display: block !important;
+  }
+}
 
 /* ArcLab */
 .about-section {
