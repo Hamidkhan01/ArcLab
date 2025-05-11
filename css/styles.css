@@ -79,45 +79,27 @@ html {
   }
 
 @media (max-width: 991px) {
-  .custom-toggler {
-    background-color: black;
-    color: white;
-    padding: 6px 12px;
-    border: none;
-    border-radius: 4px;
-    font-size: 16px;
-    font-weight: bold;
-  }
-
-  .navbar-collapse {
-    background-color: rgb(0, 0, 0);
-    width: 100vw;
-    margin: 0;
-    padding: 1rem;
-  }
-
   .navbar-nav {
     flex-direction: column;
     align-items: flex-start;
-    padding-left: 0;
+    padding-left: 1rem;
   }
 
   .navbar-nav .nav-item {
-    margin: 8px 0;
+    margin: 10px 0;
   }
 
-  .navbar-nav .nav-link {
-    font-size: 16px;
-    color: white !important; /* Force white color */
-    padding: 0;
-    text-align: left;
-    transition: color 0.3s ease;
+  .custom-toggler {
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    background: none;
+    border: none;
+    font-size: 1rem;
   }
 
-  .navbar-nav .nav-link:hover,
-  .navbar-nav .nav-link:focus,
-  .navbar-nav .nav-link.active {
-    color: #6fbf73 !important; /* Green on click/focus/hover */
+  .navbar-collapse {
+    background-color: rgb(0, 0, 0); /* Optional: match your design */
+    padding: 1rem;
   }
 }
 
