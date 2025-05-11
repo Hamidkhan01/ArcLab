@@ -78,53 +78,47 @@ html {
     color: #6fbf73 !important;
   }
 
- @media (max-width: 991px) {
-  .container {
+ /* Mobile navbar styles only */
+@media (max-width: 991px) {
+  
+  /* Customize the "MENU" button */
+  .custom-toggler {
     background-color: black;
-  }
-
-  .navbar-brand,
-  .custom-toggler {
-    color: white !important;
-  }
-
-  .custom-toggler {
-    background: none;
+    color: white;
+    padding: 6px 12px;
     border: none;
+    font-size: 16px;
     font-weight: bold;
-    font-size: 1rem;
   }
 
+  /* This ensures that the navbar expands below the brand block */
   .navbar-collapse {
-    background-color: black;
-    padding: 1rem 0;
+    background-color: black; /* Background of the expanded menu */
+    width: 100vw; /* Full-width for mobile */
+    padding: 1rem; /* Padding around the menu */
+    
+    margin-top: 10px; /* Small gap for better spacing */
   }
 
+  /* Make the navbar links stack vertically */
   .navbar-nav {
     flex-direction: column;
     align-items: flex-start;
-    padding-left: 0;
+    padding-left: 0; /* No left padding */
   }
 
+  /* Space between menu items */
   .navbar-nav .nav-item {
-    margin: 10px 0;
+    margin: 10px 0; /* Vertical spacing between links */
   }
 
+  /* Styling the links inside the expanded menu */
   .navbar-nav .nav-link {
-    color: white;
-    font-size: 1rem;
-    padding: 0.5rem 1rem;
-    transition: color 0.3s ease;
-    text-align: left;
-  }
-
-  .navbar-nav .nav-link:hover,
-  .navbar-nav .nav-link:focus,
-  .navbar-nav .nav-link.active {
-    color: #6fbf73 !important;
+    font-size: 16px;
+    color: white; /* White text */
+    padding: 0;
   }
 }
-
 
   
 
