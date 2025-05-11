@@ -4,18 +4,24 @@
 console.log("Script loaded.");
 
 
-  document.getElementById("menu-btn").addEventListener("click", () => {
-    document.getElementById("mobile-nav").classList.toggle("show");
+document.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', function (e) {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
   });
 
-  window.addEventListener("scroll", () => {
-    const navbar = document.querySelector(".navbar");
+
+  window.addEventListener('scroll', function () {
+    const navbar = document.querySelector('.navbar');
     if (window.scrollY > 50) {
-      navbar.classList.add("scrolled");
+        navbar.classList.add('scrolled');
+        navbar.classList.remove('transparent');
     } else {
-      navbar.classList.remove("scrolled");
+        navbar.classList.remove('scrolled');
+        navbar.classList.add('transparent');
     }
-  });
+});
+
 
 
 document.querySelector('form').addEventListener('submit', function(event) {
