@@ -213,7 +213,44 @@
 }
 
 
+@media (max-width: 1200px) {
+    .team-container {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
 
+  @media (max-width: 768px) {
+    .team-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .hero-section {
+      height: auto;
+    }
+    .hero-section .overlay {
+      padding: 20px 0;
+    }
+    .breadcrumbs {
+      font-size: 14px;
+    }
+    .bread {
+      font-size: 28px;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .team-container {
+      grid-template-columns: 1fr;
+    }
+    .title {
+      text-align: center;
+    }
+    .navbar-brand {
+      font-size: 1.2rem;
+    }
+    .navbar-nav .nav-link {
+      margin-left: 0;
+    }
+  }
 
 
 /* Footer */
