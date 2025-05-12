@@ -247,46 +247,46 @@ h3 {
   color: #555;
 }
 
-/* Mobile Responsiveness */
+
 @media (max-width: 767px) {
   .about-author {
-    flex-direction: column; /* Stack the items vertically on mobile */
+    flex-direction: column; 
     padding: 15px;
   }
 
   .bio {
-    margin-right: 0; /* Remove the margin to make the image full-width */
+    margin-right: 0; 
     margin-bottom: 15px;
-    text-align: center; /* Center the image on mobile */
+    text-align: center; 
   }
 
   .bio img {
-    width: 80px; /* Reduce the size of the image on mobile */
+    width: 80px;
     height: 80px;
   }
 
   .desc {
-    text-align: center; /* Center the text on mobile for a cleaner layout */
+    text-align: center; 
   }
 
   h3 {
-    font-size: 18px; /* Adjust the font size on mobile */
+    font-size: 18px; 
     margin-bottom: 8px;
   }
 
   .desc p {
-    font-size: 14px; /* Maintain a consistent font size */
+    font-size: 14px; 
   }
 }
 
-/* Tablet Responsiveness */
+
 @media (min-width: 768px) and (max-width: 1024px) {
   .about-author {
     padding: 18px;
   }
 
   .bio img {
-    width: 90px; /* Slightly smaller image on tablet */
+    width: 90px; 
     height: 90px;
   }
 
@@ -357,6 +357,7 @@ h3 {
 }
 
 /* Comment Form */
+/* Comment Form */
 .comment-form-wrap {
   background-color: #e9ecef;
   padding: 20px;
@@ -374,29 +375,26 @@ h3 {
   margin-bottom: 20px;
 }
 
-.comment-form-wrap input[type="text"],
-.comment-form-wrap input[type="email"],
-.comment-form-wrap input[type="url"],
-.comment-form-wrap textarea {
+.comment-form-wrap .form-control {
   width: 100%;
   padding: 10px;
+  font-size: 16px;
   border: 1px solid #ddd;
   border-radius: 4px;
-  margin-bottom: 10px;
-  font-size: 16px;
+  box-sizing: border-box;
 }
 
-.comment-form-wrap input[type="submit"] {
+.comment-form-wrap .btn {
   background-color: #007bff;
   color: white;
-  padding: 10px 20px;
+  font-size: 16px;
   border: none;
   border-radius: 4px;
+  padding: 10px 20px;
   cursor: pointer;
-  font-size: 16px;
 }
 
-.comment-form-wrap input[type="submit"]:hover {
+.comment-form-wrap .btn:hover {
   background-color: #0056b3;
 }
 
@@ -416,42 +414,19 @@ h3 {
     margin-bottom: 15px;
   }
 
-  .comment-form-wrap input[type="text"],
-  .comment-form-wrap input[type="email"],
-  .comment-form-wrap input[type="url"],
-  .comment-form-wrap textarea {
+  .comment-form-wrap .form-control {
     padding: 12px;
     font-size: 14px;
   }
 
-  .comment-form-wrap input[type="submit"] {
+  .comment-form-wrap .btn {
     padding: 12px 25px;
     font-size: 14px;
+    width: 100%; /* Optional: full-width button on mobile */
   }
 }
 
-/* Tablet Responsiveness */
-@media (min-width: 768px) and (max-width: 1024px) {
-  .comment-form-wrap {
-    padding: 18px;
-    margin-top: 30px;
-  }
 
-  .comment-form-wrap h3 {
-    font-size: 19px;
-  }
-
-  .comment-form-wrap input[type="text"],
-  .comment-form-wrap input[type="email"],
-  .comment-form-wrap input[type="url"],
-  .comment-form-wrap textarea {
-    padding: 12px;
-  }
-
-  .comment-form-wrap input[type="submit"] {
-    padding: 12px 25px;
-  }
-}
 
 
 /* Sidebar */
