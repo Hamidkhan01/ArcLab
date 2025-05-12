@@ -255,6 +255,7 @@ html {
   border-radius: 8px;
   padding: 30px;
   color: #fff;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -323,63 +324,30 @@ html {
 
 /* Mobile responsiveness */
 @media (max-width: 767.98px) {
+  /* Adjust all sections to display in column order for mobile */
   .about-section .row {
     flex-direction: column;
   }
 
-  .col-lg-7,
-  .col-lg-5 {
+  .col-lg-12 {
     max-width: 100%;
     flex: 0 0 100%;
-    margin-bottom: 15px; /* Added spacing between columns */
+    margin-bottom: 1.5rem;
   }
 
-  .img,
-  .img-2 {
+  /* Adjust height and order of image */
+  .img {
     height: 250px;
     margin-bottom: 1rem;
   }
 
-  .wrap-about {
-    padding: 1rem 1.5rem;
+  .img-overlay {
+    padding: 20px 10px;
+    height: auto;
+    margin-top: 1rem; /* Add space between image and form */
   }
 
-  .heading-section {
-    padding: 0;
-    margin-top: 1rem;
-  }
-
-  .request-quote {
-    padding: 20px 15px;
-    position: relative;
-    z-index: 2;
-    background: rgba(0, 0, 0, 0.5); /* Ensures form's background is above the image */
-  }
-
-  /* Prevent overlapping of the form and image */
-  .request-quote {
-    margin-top: 20px; /* Add margin to ensure the form section doesn’t overlap the image */
-  }
-
-  /* Reorder the elements on smaller screens */
-  .about-section .row {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .col-lg-5 {
-    order: 1; /* Place text section first */
-  }
-
-  .col-lg-7 {
-    order: 2; /* Place image section second */
-  }
-
-  .col-lg-12 {
-    order: 3; /* Place form section last */
-  }
-
-  /* Adjusting the form input fields */
+  /* Adjust the form fields */
   .request-form .form-control {
     font-size: 14px;
     height: 40px;
@@ -393,6 +361,7 @@ html {
     padding: 8px 18px;
   }
 
+  /* Adjust the text section */
   .heading-section h2 {
     font-size: 28px;
     margin-bottom: 1rem;
