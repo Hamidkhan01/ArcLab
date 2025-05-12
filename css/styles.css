@@ -255,7 +255,6 @@ html {
   border-radius: 8px;
   padding: 30px;
   color: #fff;
-  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -352,6 +351,14 @@ html {
 
   .request-quote {
     padding: 20px 15px;
+    position: relative;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.5); /* Ensures form's background is above the image */
+  }
+
+  /* Prevent overlapping of the form and image */
+  .request-quote {
+    margin-top: 20px; /* Add margin to ensure the form section doesn’t overlap the image */
   }
 
   /* Reorder the elements on smaller screens */
