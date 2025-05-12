@@ -322,57 +322,42 @@ html {
   color: #555;
 }
 
-/* Mobile responsiveness */
 @media (max-width: 767.98px) {
-  /* Adjust all sections to display in column order for mobile */
+  /* Mobile adjustments: Change order and layout */
   .about-section .row {
     flex-direction: column;
   }
 
-  .col-lg-12 {
+  .col-lg-7,
+  .col-lg-5 {
     max-width: 100%;
     flex: 0 0 100%;
-    margin-bottom: 1.5rem;
   }
 
-  /* Adjust height and order of image */
-  .img {
+  .img,
+  .img-2 {
     height: 250px;
     margin-bottom: 1rem;
   }
 
+  .wrap-about {
+    padding: 1rem 1.5rem;
+  }
+
+  .heading-section {
+    padding: 0;
+    margin-top: 1rem;
+  }
+
+  /* Ensure form background image has equal height */
   .img-overlay {
-    padding: 20px 10px;
-    height: auto;
-    margin-top: 1rem; /* Add space between image and form */
+    height: 250px;
   }
 
-  /* Adjust the form fields */
-  .request-form .form-control {
-    font-size: 14px;
-    height: 40px;
-  }
-
-  .request-form textarea.form-control {
-    height: 150px;
-  }
-
-  .request-form .btn {
-    padding: 8px 18px;
-  }
-
-  /* Adjust the text section */
-  .heading-section h2 {
-    font-size: 28px;
-    margin-bottom: 1rem;
-  }
-
-  .heading-section p {
-    font-size: 14px;
+  .request-quote {
+    padding: 20px 15px;
   }
 }
-
-
 
 
 /* Counter */
