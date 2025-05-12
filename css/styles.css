@@ -322,6 +322,7 @@ html {
   color: #555;
 }
 
+/* Mobile responsiveness */
 @media (max-width: 767.98px) {
   .about-section .row {
     flex-direction: column;
@@ -331,25 +332,46 @@ html {
   .col-lg-5 {
     max-width: 100%;
     flex: 0 0 100%;
+    margin-bottom: 15px; /* Added spacing between the columns */
+  }
+
+  .heading-section {
+    padding: 0 15px;
+    margin-top: 1.5rem;
   }
 
   .img,
   .img-2 {
-    height: 250px;
+    height: 200px;
     margin-bottom: 1rem;
-  }
-
-  .wrap-about {
-    padding: 1rem 1.5rem;
-  }
-
-  .heading-section {
-    padding: 0;
-    margin-top: 1rem;
+    border-radius: 8px;
   }
 
   .request-quote {
     padding: 20px 15px;
+  }
+
+  /* Adjusting the form input fields */
+  .request-form .form-control {
+    font-size: 14px;
+    height: 40px;
+  }
+
+  .request-form textarea.form-control {
+    height: 150px;
+  }
+
+  .request-form .btn {
+    padding: 8px 18px;
+  }
+
+  .heading-section h2 {
+    font-size: 28px;
+    margin-bottom: 1rem;
+  }
+
+  .heading-section p {
+    font-size: 14px;
   }
 }
 
