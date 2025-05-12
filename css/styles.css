@@ -232,10 +232,12 @@ html {
 
 
 /* ArcLab */
+/* ArcLab */
 .about-section {
   padding: 6em 0;
 }
 
+/* Image styles */
 .img,
 .img-2 {
   background-size: cover;
@@ -250,6 +252,7 @@ html {
   background-blend-mode: overlay;
 }
 
+/* Request Quote Section */
 .request-quote {
   background: rgba(0, 0, 0, 0.5);
   border-radius: 8px;
@@ -274,6 +277,7 @@ html {
   margin-bottom: 20px;
 }
 
+/* Form Control */
 .request-form .form-control {
   background: #fff;
   border: 1px solid #ccc;
@@ -300,6 +304,7 @@ html {
   background-color: #85a96b;
 }
 
+/* About Content */
 .wrap-about {
   padding: 20px;
 }
@@ -322,60 +327,89 @@ html {
   color: #555;
 }
 
-/* Media query for mobile */
-@media (max-width: 767.98px) {
+/* Mobile & Tablet Adjustments */
+@media (max-width: 992px) {
   .about-section .row {
-    flex-direction: column; /* Stack the columns vertically */
+    flex-direction: column;
+  }
+
+  .col-lg-7 {
+    order-md-first; /* Ensure that image comes first on smaller devices */
   }
 
   .col-lg-7,
   .col-lg-5 {
-    max-width: 100%;
-    flex: 0 0 100%;
+    width: 100%; /* Make columns full width */
   }
 
-  /* Heading section: text should be first */
-  .heading-section {
-    padding: 0 15px;
-    margin-top: 1.5rem;
-    text-align: center;
+  .img,
+  .img-2 {
+    height: 250px; /* Adjust image size for smaller screens */
+    margin-bottom: 20px; /* Add space between images and content */
+  }
+
+  .img-overlay {
+    padding: 1rem; /* Add padding for better readability */
+  }
+
+  .request-quote {
+    padding: 20px; /* Adjust padding for smaller screens */
+  }
+
+  .request-quote h3 {
+    font-size: 20px; /* Adjust heading size */
+  }
+
+  .request-form .form-control {
+    height: 40px; /* Make form fields smaller for mobile */
+    font-size: 14px; /* Adjust font size */
+  }
+
+  .request-form textarea.form-control {
+    height: 150px; /* Adjust text area height */
+  }
+
+  .wrap-about {
+    padding: 15px; /* Adjust padding for mobile */
   }
 
   .heading-section h2 {
-    font-size: 28px; /* Slightly smaller heading */
+    font-size: 28px; /* Adjust heading size */
   }
 
   .heading-section p {
-    font-size: 14px; /* Adjust text size for mobile */
-    margin-top: 0.5rem;
+    font-size: 14px; /* Adjust paragraph text size */
+  }
+}
+
+@media (max-width: 576px) {
+  .img {
+    height: 200px; /* Adjust image size further for smaller screens */
   }
 
-  /* Image section */
-  .img,
-  .img-2 {
-    height: 250px;
-    margin-bottom: 1rem;
-    margin-top: 1rem;
-  }
-
-  /* Form section */
   .request-quote {
-    padding: 20px 15px;
+    padding: 15px; /* Adjust padding for very small screens */
   }
 
-  /* Ensure image, text, and form are in correct order */
-  .wrap-about {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 1rem 1.5rem;
+  .request-quote h3 {
+    font-size: 18px; /* Adjust heading size */
   }
 
-  /* Optional: To make form centered on mobile */
-  .request-form {
-    max-width: 100%;
-    padding: 10px;
-    text-align: center;
+  .request-form .form-control {
+    height: 35px; /* Smaller input fields */
+    font-size: 14px; /* Smaller font size */
+  }
+
+  .request-form textarea.form-control {
+    height: 120px; /* Adjust text area height */
+  }
+
+  .heading-section h2 {
+    font-size: 24px; /* Adjust heading size */
+  }
+
+  .heading-section p {
+    font-size: 12px; /* Adjust paragraph size */
   }
 }
 
