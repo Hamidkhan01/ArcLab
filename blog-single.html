@@ -185,8 +185,7 @@
   max-width: 33.33333%;
 }
 
-/* Blog Section */
-.ftco-section {
+.blog-section {
   padding: 60px 0;
 }
 
@@ -210,305 +209,80 @@ img.img-fluid {
   margin-bottom: 20px;
 }
 
-/* Author Section */
-.about-author {
-  display: flex;
-  background-color: #e9ecef;
-  padding: 20px;
-  margin-top: 40px;
-  border-radius: 8px;
-  flex-wrap: wrap; /* Allows items to wrap on smaller screens */
-}
-
-.bio {
-  margin-right: 20px;
-  flex-shrink: 0; /* Prevents the bio image from shrinking */
-  margin-bottom: 15px;
-}
-
-.bio img {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-}
-
-.desc {
-  flex-grow: 1;
-}
-
-h3 {
-  font-size: 20px;
-  color: #212529;
-  margin-bottom: 10px;
-}
-
-.desc p {
+.tagcloud a {
+  margin-right: 10px;
+  background-color: #17a2b8;
+  color: #fff;
+  padding: 8px 12px;
+  text-transform: capitalize;
+  display: inline-block;
   font-size: 14px;
-  color: #555;
 }
 
-
-@media (max-width: 767px) {
-  .about-author {
-    flex-direction: column; 
-    padding: 15px;
-  }
-
-  .bio {
-    margin-right: 0; 
-    margin-bottom: 15px;
-    text-align: center; 
-  }
-
-  .bio img {
-    width: 80px;
-    height: 80px;
-  }
-
-  .desc {
-    text-align: center; 
-  }
-
-  h3 {
-    font-size: 18px; 
-    margin-bottom: 8px;
-  }
-
-  .desc p {
-    font-size: 14px; 
-  }
+.comment-form-wrap form {
+  background-color: #f8f9fa;
+  padding: 30px;
+  border-radius: 5px;
 }
 
-
-@media (min-width: 768px) and (max-width: 1024px) {
-  .about-author {
-    padding: 18px;
-  }
-
-  .bio img {
-    width: 90px; 
-    height: 90px;
-  }
-
-  h3 {
-    font-size: 19px;
-  }
-
-  .desc p {
-    font-size: 15px;
-  }
-}
-
-
-/* Tags */
-.tag-widget {
-  margin-top: 30px;
-}
-
-.tagcloud {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.tag-cloud-link {
-  padding: 8px 16px;
-  background-color: #6c757d;
-  color: white;
-  text-decoration: none;
-  border-radius: 20px;
-  transition: background-color 0.3s;
-}
-
-.tag-cloud-link:hover {
-  background-color: #343a40;
-}
-
-/* Comment Section */
-.comment-list {
-  list-style-type: none;
-  padding: 0;
-}
-
-.comment {
-  display: flex;
-  margin-bottom: 30px;
-}
-
-.vcard img {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-}
-
-.comment-body {
-  flex-grow: 1;
-  margin-left: 15px;
-}
-
-.comment-body .meta {
-  font-size: 14px;
-  color: #aaa;
-}
-
-.comment-body p {
-  font-size: 16px;
-  line-height: 1.5;
-}
-
-/* Comment Form */
-/* Comment Form */
-.comment-form-wrap {
-  background-color: #e9ecef;
-  padding: 20px;
-  margin-top: 40px;
-  border-radius: 8px;
-}
-
-.comment-form-wrap h3 {
-  font-size: 20px;
-  margin-bottom: 15px;
-  color: #333;
-}
-
-.comment-form-wrap .form-group {
-  margin-bottom: 20px;
-}
-
-.comment-form-wrap .form-control {
+.comment-form-wrap input, .comment-form-wrap textarea {
   width: 100%;
-  padding: 10px;
-  font-size: 16px;
+  padding: 12px;
   border: 1px solid #ddd;
-  border-radius: 4px;
-  box-sizing: border-box;
+  margin-bottom: 15px;
+  border-radius: 5px;
 }
 
-.comment-form-wrap .btn {
-  background-color: #007bff;
-  color: white;
-  font-size: 16px;
+.comment-form-wrap input[type="submit"] {
+  background-color: #17a2b8;
+  color: #fff;
   border: none;
-  border-radius: 4px;
-  padding: 10px 20px;
   cursor: pointer;
 }
 
-.comment-form-wrap .btn:hover {
-  background-color: #0056b3;
-}
-
-/* Mobile Responsiveness */
-@media (max-width: 767px) {
-  .comment-form-wrap {
-    padding: 15px;
-    margin-top: 20px;
-  }
-
-  .comment-form-wrap h3 {
-    font-size: 18px;
-    text-align: center;
-  }
-
-  .comment-form-wrap .form-group {
-    margin-bottom: 15px;
-  }
-
-  .comment-form-wrap .form-control {
-    padding: 12px;
-    font-size: 14px;
-  }
-
-  .comment-form-wrap .btn {
-    padding: 12px 25px;
-    font-size: 14px;
-    width: 100%; /* Optional: full-width button on mobile */
-  }
-}
-
-
-
-
-/* Sidebar */
 .sidebar-box {
   margin-bottom: 30px;
 }
 
-.sidebar-box h3 {
-  font-size: 20px;
-  margin-bottom: 15px;
+.search-form input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
 }
 
-.sidebar-box ul {
-  list-style-type: none;
+.categories ul {
+  list-style: none;
   padding: 0;
 }
 
-.sidebar-box li {
-  margin-bottom: 10px;
-}
-
-.sidebar-box a {
+.categories ul li a {
   text-decoration: none;
-  color: #007bff;
+  color: #333;
   font-size: 16px;
 }
 
-.sidebar-box a:hover {
-  color: #0056b3;
-}
-
-.search-form {
-  display: flex;
-  border: 1px solid #ddd;
-  padding: 10px;
-  margin-bottom: 20px;
-}
-
-.search-form .form-group {
-  flex-grow: 1;
-}
-
-.search-form input {
-  width: 100%;
-  padding: 10px;
-  border: none;
-  outline: none;
-  font-size: 16px;
-}
-
-.search-form .icon {
-  padding: 10px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  cursor: pointer;
-}
-
-.block-21 {
-  display: flex;
-  margin-bottom: 20px;
+.categories ul li a:hover {
+  color: #17a2b8;
 }
 
 .block-21 .blog-img {
-  width: 120px;
-  height: 120px;
   background-size: cover;
-  background-position: center;
+  width: 100px;
+  height: 100px;
 }
 
 .block-21 .text {
+  flex: 1;
   padding-left: 15px;
 }
 
-.block-21 .heading {
-  font-size: 16px;
-  font-weight: bold;
+.block-21 .meta {
+  font-size: 14px;
+  color: #777;
 }
 
-.meta {
-  font-size: 14px;
-  color: #aaa;
+.block-21 .meta div {
+  margin-bottom: 5px;
 }
 
 
@@ -654,126 +428,124 @@ h3 {
 <br>
 <br>
 <br>
-        <section class="ftco-section">
-          <div class="container">
-              <div class="row">
-                  <div class="col-md-8 ftco-animate">
-                      <p>
-                          <img src="images/image_1.jpg" alt="" class="img-fluid">
-                      </p>
-                      <h2 class="mb-3">It is a long established fact a reader be distracted</h2>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, eius mollitia suscipit, quisquam doloremque distinctio perferendis et doloribus unde architecto optio laboriosam porro adipisci sapiente officiis nemo accusamus ad praesentium? Esse minima nisi et. Dolore perferendis, enim praesentium omnis, iste doloremque quia officia optio deserunt molestiae voluptates soluta architecto tempora.</p>
-                      <p>Molestiae cupiditate inventore animi, maxime sapiente optio, illo est nemo veritatis repellat sunt doloribus nesciunt! Minima laborum magni reiciendis qui voluptate quisquam voluptatem soluta illo eum ullam incidunt rem assumenda eveniet eaque sequi deleniti tenetur dolore amet fugit perspiciatis ipsa, odit. Nesciunt dolor minima esse vero ut ea, repudiandae suscipit!</p>
-                      <h2 class="mb-3 mt-5">#2. Creative WordPress Themes</h2>
-                      <p>Temporibus ad error suscipit exercitationem hic molestiae totam obcaecati rerum, eius aut, in. Exercitationem atque quidem tempora maiores ex architecto voluptatum aut officia doloremque. Error dolore voluptas, omnis molestias odio dignissimos culpa ex earum nisi consequatur quos odit quasi repellat qui officiis reiciendis incidunt hic non? Debitis commodi aut, adipisci.</p>
-                      <p>
-                          <img src="images/image_3.jpg" alt="" class="img-fluid">
-                      </p>
-                      <p>Quisquam esse aliquam fuga distinctio, quidem delectus veritatis reiciendis. Nihil explicabo quod, est eos ipsum. Unde aut non tenetur tempore, nisi culpa voluptate maiores officiis quis vel ab consectetur suscipit veritatis nulla quos quia aspernatur perferendis, libero sint. Error, velit, porro. Deserunt minus, quibusdam iste enim veniam, modi rem maiores.</p>
-                      <p>Odit voluptatibus, eveniet vel nihil cum ullam dolores laborum, quo velit commodi rerum eum quidem pariatur! Quia fuga iste tenetur, ipsa vel nisi in dolorum consequatur, veritatis porro explicabo soluta commodi libero voluptatem similique id quidem? Blanditiis voluptates aperiam non magni. Reprehenderit nobis odit inventore, quia laboriosam harum excepturi ea.</p>
-                      <p>Adipisci vero culpa, eius nobis soluta. Dolore, maxime ullam ipsam quidem, dolor distinctio similique asperiores voluptas enim, exercitationem ratione aut adipisci modi quod quibusdam iusto, voluptates beatae iure nemo itaque laborum. Consequuntur et pariatur totam fuga eligendi vero dolorum provident. Voluptatibus, veritatis. Beatae numquam nam ab voluptatibus culpa, tenetur recusandae!</p>
-                      <p>Voluptas dolores dignissimos dolorum temporibus, autem aliquam ducimus at officia adipisci quasi nemo a perspiciatis provident magni laboriosam repudiandae iure iusto commodi debitis est blanditiis alias laborum sint dolore. Dolores, iure, reprehenderit. Error provident, pariatur cupiditate soluta doloremque aut ratione. Harum voluptates mollitia illo minus praesentium, rerum ipsa debitis, inventore?</p>
-                      <div class="tag-widget post-tag-container mb-5 mt-5">
-                          <div class="tagcloud">
-                              <a href="#" class="tag-cloud-link">house</a>
-                              <a href="#" class="tag-cloud-link">home</a>
-                              <a href="#" class="tag-cloud-link">building</a>
-                              <a href="#" class="tag-cloud-link">Travel</a>
-                          </div>
-                      </div>
-      
-                      <div class="about-author d-flex p-4 bg-light">
-                          <div class="bio mr-5">
-                              <img src="images/person_1.jpg" alt="Image placeholder" class="img-fluid mb-4">
-                          </div>
-                          <div class="desc">
-                              <h3>George Washington</h3>
-                              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus itaque, autem necessitatibus voluptate quod mollitia delectus aut, sunt placeat nam vero culpa sapiente consectetur similique, inventore eos fugit cupiditate numquam!</p>
-                          </div>
-                      </div>
-      
-                      <div class="pt-5 mt-5">
-                          <h3 class="mb-5">6 Comments</h3>
-                          <ul class="comment-list">
-                              <li class="comment">
-                                  <div class="vcard bio">
-                                      <img src="images/person_1.jpg" alt="Image placeholder">
-                                  </div>
-                                  <div class="comment-body">
-                                      <h3>John Doe</h3>
-                                      <div class="meta">June 01, 2020 at 2:21pm</div>
-                                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe enim sapiente iste iure! Quam voluptas earum impedit necessitatibus, nihil?</p>
-                                      <p><a href="#" class="reply">Reply</a></p>
-                                  </div>
-                              </li>
-                              
-                          </ul>
-      
-                          <div class="comment-form-wrap pt-5">
-                              <h3 class="mb-5">Leave a comment</h3>
-                              <form action="#" class="p-5 bg-light">
-                                  <div class="form-group">
-                                      <label for="name">Name *</label>
-                                      <input type="text" class="form-control" id="name">
-                                  </div>
-                                  <div class="form-group">
-                                      <label for="email">Email *</label>
-                                      <input type="email" class="form-control" id="email">
-                                  </div>
-                                  <div class="form-group">
-                                      <label for="website">Website</label>
-                                      <input type="url" class="form-control" id="website">
-                                  </div>
-      
-                                  <div class="form-group">
-                                      <label for="message">Message</label>
-                                      <textarea name="" id="message" cols="30" rows="10" class="form-control"></textarea>
-                                  </div>
-                                  <div class="form-group">
-                                      <input type="submit" value="Post Comment" class="btn py-3 px-4 btn-primary">
-                                  </div>
-                              </form>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="col-md-4 sidebar">
-                      <div class="sidebar-box">
-                          <form action="#" class="search-form">
-                              <div class="form-group">
-                                  <span class="icon fa fa-search"></span>
-                                  <input type="text" class="form-control" placeholder="Type a keyword and hit enter">
-                              </div>
-                          </form>
-                      </div>
-                      <div class="sidebar-box">
-                          <div class="categories">
-                              <h3>Categories</h3>
-                              <ul>
-                                  <li><a href="#">Planning <span>(12)</span></a></li>
-                                  <li><a href="#">Interior Design <span>(22)</span></a></li>
-                                  <!-- More categories -->
-                              </ul>
-                          </div>
-                      </div>
-                      <div class="sidebar-box">
-                          <h3>Recent Blog</h3>
-                          <div class="block-21 mb-4 d-flex">
-                              <a class="blog-img mr-4" style="background-image: url(images/image_1.jpg);"></a>
-                              <div class="text">
-                                  <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
-                                  <div class="meta">
-                                      <div><a href="#"><span class="icon-calendar"></span> June 01, 2020</a></div>
-                                      <div><a href="#"><span class="icon-person"></span> Admin</a></div>
-                                      <div><a href="#"><span class="icon-chat"></span> 19</a></div>
-                                  </div>
-                              </div>
-                          </div>
-                          
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </section>
+        <section class="blog-section">
+    <div class="container">
+        <div class="row">
+            <div class="content col-md-8">
+                <p>
+                    <img src="images/image_1.jpg" alt="" class="img-fluid">
+                </p>
+                <h2 class="mb-3">It is a long established fact a reader be distracted</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, eius mollitia suscipit, quisquam doloremque distinctio perferendis et doloribus unde architecto optio laboriosam porro adipisci sapiente officiis nemo accusamus ad praesentium? Esse minima nisi et. Dolore perferendis, enim praesentium omnis, iste doloremque quia officia optio deserunt molestiae voluptates soluta architecto tempora.</p>
+                <p>Molestiae cupiditate inventore animi, maxime sapiente optio, illo est nemo veritatis repellat sunt doloribus nesciunt! Minima laborum magni reiciendis qui voluptate quisquam voluptatem soluta illo eum ullam incidunt rem assumenda eveniet eaque sequi deleniti tenetur dolore amet fugit perspiciatis ipsa, odit. Nesciunt dolor minima esse vero ut ea, repudiandae suscipit!</p>
+                <h2 class="mb-3 mt-5">#2. Creative WordPress Themes</h2>
+                <p>Temporibus ad error suscipit exercitationem hic molestiae totam obcaecati rerum, eius aut, in. Exercitationem atque quidem tempora maiores ex architecto voluptatum aut officia doloremque. Error dolore voluptas, omnis molestias odio dignissimos culpa ex earum nisi consequatur quos odit quasi repellat qui officiis reiciendis incidunt hic non? Debitis commodi aut, adipisci.</p>
+                <p>
+                    <img src="images/image_3.jpg" alt="" class="img-fluid">
+                </p>
+                <p>Quisquam esse aliquam fuga distinctio, quidem delectus veritatis reiciendis. Nihil explicabo quod, est eos ipsum. Unde aut non tenetur tempore, nisi culpa voluptate maiores officiis quis vel ab consectetur suscipit veritatis nulla quos quia aspernatur perferendis, libero sint. Error, velit, porro. Deserunt minus, quibusdam iste enim veniam, modi rem maiores.</p>
+                <p>Odit voluptatibus, eveniet vel nihil cum ullam dolores laborum, quo velit commodi rerum eum quidem pariatur! Quia fuga iste tenetur, ipsa vel nisi in dolorum consequatur, veritatis porro explicabo soluta commodi libero voluptatem similique id quidem? Blanditiis voluptates aperiam non magni. Reprehenderit nobis odit inventore, quia laboriosam harum excepturi ea.</p>
+                <p>Adipisci vero culpa, eius nobis soluta. Dolore, maxime ullam ipsam quidem, dolor distinctio similique asperiores voluptas enim, exercitationem ratione aut adipisci modi quod quibusdam iusto, voluptates beatae iure nemo itaque laborum. Consequuntur et pariatur totam fuga eligendi vero dolorum provident. Voluptatibus, veritatis. Beatae numquam nam ab voluptatibus culpa, tenetur recusandae!</p>
+                <p>Voluptas dolores dignissimos dolorum temporibus, autem aliquam ducimus at officia adipisci quasi nemo a perspiciatis provident magni laboriosam repudiandae iure iusto commodi debitis est blanditiis alias laborum sint dolore. Dolores, iure, reprehenderit. Error provident, pariatur cupiditate soluta doloremque aut ratione. Harum voluptates mollitia illo minus praesentium, rerum ipsa debitis, inventore?</p>
+                <div class="tag-widget post-tag-container mb-5 mt-5">
+                    <div class="tagcloud">
+                        <a href="#" class="tag-cloud-link">house</a>
+                        <a href="#" class="tag-cloud-link">home</a>
+                        <a href="#" class="tag-cloud-link">building</a>
+                        <a href="#" class="tag-cloud-link">Travel</a>
+                    </div>
+                </div>
+
+                <div class="about-author d-flex p-4 bg-light">
+                    <div class="bio mr-5">
+                        <img src="images/person_1.jpg" alt="Image placeholder" class="img-fluid mb-4">
+                    </div>
+                    <div class="desc">
+                        <h3>George Washington</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus itaque, autem necessitatibus voluptate quod mollitia delectus aut, sunt placeat nam vero culpa sapiente consectetur similique, inventore eos fugit cupiditate numquam!</p>
+                    </div>
+                </div>
+
+                <div class="pt-5 mt-5">
+                    <h3 class="mb-5">6 Comments</h3>
+                    <ul class="comment-list">
+                        <li class="comment">
+                            <div class="vcard bio">
+                                <img src="images/person_1.jpg" alt="Image placeholder">
+                            </div>
+                            <div class="comment-body">
+                                <h3>John Doe</h3>
+                                <div class="meta">June 01, 2020 at 2:21pm</div>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe enim sapiente iste iure! Quam voluptas earum impedit necessitatibus, nihil?</p>
+                                <p><a href="#" class="reply">Reply</a></p>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <div class="comment-form-wrap pt-5">
+                        <h3 class="mb-5">Leave a comment</h3>
+                        <form action="#" class="p-5 bg-light">
+                            <div class="form-group">
+                                <label for="name">Name *</label>
+                                <input type="text" class="form-control" id="name">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" class="form-control" id="email">
+                            </div>
+                            <div class="form-group">
+                                <label for="website">Website</label>
+                                <input type="url" class="form-control" id="website">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea name="" id="message" cols="30" rows="10" class="form-control"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" value="Post Comment" class="btn py-3 px-4 btn-primary">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 sidebar">
+                <div class="sidebar-box">
+                    <form action="#" class="search-form">
+                        <div class="form-group">
+                            <span class="icon fa fa-search"></span>
+                            <input type="text" class="form-control" placeholder="Type a keyword and hit enter">
+                        </div>
+                    </form>
+                </div>
+                <div class="sidebar-box">
+                    <div class="categories">
+                        <h3>Categories</h3>
+                        <ul>
+                            <li><a href="#">Planning <span>(12)</span></a></li>
+                            <li><a href="#">Interior Design <span>(22)</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="sidebar-box">
+                    <h3>Recent Blog</h3>
+                    <div class="block-21 mb-4 d-flex">
+                        <a class="blog-img mr-4" style="background-image: url(images/image_1.jpg);"></a>
+                        <div class="text">
+                            <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
+                            <div class="meta">
+                                <div><a href="#"><span class="icon-calendar"></span> June 01, 2020</a></div>
+                                <div><a href="#"><span class="icon-person"></span> Admin</a></div>
+                                <div><a href="#"><span class="icon-chat"></span> 19</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
       
 
 
